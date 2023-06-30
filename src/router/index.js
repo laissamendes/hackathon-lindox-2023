@@ -5,6 +5,7 @@ import LavanderiaView from '../views/LavanderiaView.vue'
 import CosturaView from '../views/CosturaView.vue'
 import TingimentoView from '../views/TingimentoView.vue'
 import ProdutosView from '../views/ProdutosView.vue'
+import SacolaView from '../views/SacolaView.vue'
 
 
 const router = createRouter({
@@ -40,6 +41,11 @@ const router = createRouter({
       name: 'produtos',
       component: ProdutosView
     },
+    {
+      path: '/sacola',
+      name: 'sacola',
+      component: SacolaView
+    }
   ]
 })
 

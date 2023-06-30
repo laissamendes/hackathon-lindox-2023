@@ -6,12 +6,13 @@
 <template>
   <header > 
     <div class="menu">
-    <router-link to="/">Início</router-link>
-      <router-link to="/lojas">Lojas</router-link>
-      <router-link to="/lavanderia">Lavanderia</router-link>
-      <router-link to="/costura">Costura</router-link>
-      <router-link to="/tingimento">Tingimento</router-link>
-      <router-link to="/produtos">Produtos</router-link>
+    <router-link to="/">INÍCIO | </router-link>
+      <router-link to="/lojas">LOJAS | </router-link>
+      <router-link to="/lavanderia">LAVANDERIA | </router-link>
+      <router-link to="/costura">COSTURA | </router-link>
+      <router-link to="/tingimento">TINGIMENTO | </router-link>
+      <router-link to="/produtos">PRODUTOS | </router-link>
+      <router-link to="/sacola"><img src="sacola.png" alt="" width="95" height="50"></router-link>
   </div>
    </header>
  
@@ -19,7 +20,11 @@
     <router-view />
  
   </main>
-  <footer>FOOTER</footer>
+  <footer>
+    <h2>Restaura Jeans Joinville - SC</h2> <br>
+    <p>Av. Getúlio Vargas, 627 - Bucarein, Joinville - SC, 89202-205</p> <br>
+    <h3>(47) 99669-5838</h3>
+  </footer>
 </template>
 
 <style scoped>
