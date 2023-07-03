@@ -21,8 +21,8 @@
  
   </main>
   <footer>
-    <h2>Restaura Jeans Joinville - SC</h2> <br>
-    <p>Av. Getúlio Vargas, 627 - Bucarein, Joinville - SC, 89202-205</p> <br>
+    <h2>Restaura Jeans Joinville - SC</h2>
+    <p>Av. Getúlio Vargas, 627 - Bucarein, Joinville - SC, 89202-205</p>
     <h3>(47) 99669-5838</h3>
   </footer>
 </template>

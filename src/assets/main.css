@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   color: #003d8f;
-  background-image: url("fundo.xcf" );
+  background-image: url("fundo.png" );
   background-repeat: no-repeat;
   background-size: cover;
 }
