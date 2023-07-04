@@ -3,8 +3,15 @@
 
 <template>
   <div id="paginaInicial">
-    <h1>Início</h1>
-  <button @click="$router.push({name:'about'})">Ir para sobre</button>
+    
+    <div>
+      <h1>Restaura Jeans</h1>
+      <div>
+        <p>
+          
+        </p>
+      </div>
+    </div>
   </div>
   
 </template>
