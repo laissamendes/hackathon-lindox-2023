@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  color: #003d8f;
   background-image: url("fundo.png" );
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,10 +23,9 @@ body {
 header {
   width: 100%;
   height: 70px;
-  background-color: #003e8faf;
   color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   margin-top: 15px;
   font-size: 25px;
@@ -43,7 +41,6 @@ main {
 
 footer {
   width: 100%;
-  background-color: #003e8faf;
   color: #fff;
   display: flex;
   justify-content: right;
