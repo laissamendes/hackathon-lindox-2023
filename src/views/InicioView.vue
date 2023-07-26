@@ -17,6 +17,18 @@
   <div id="paginaInicial">
   
       <h1>Restaura Jeans</h1>
+      <div class="informacoes">
+<div class="informacao">
+  <p>A primeira unidade foi criada na cidade de Santa Maria/RS, uma cidade militar e universitária.O cenário perfeito para a criação do pequeno espaço que viria a ser um verdadeiro laboratório para a marca.</p>
+</div>
+<div class="informacao">
+  <p>A Restaura Jeans é uma empresa que trabalha juntamente com a sustentabilidade e contém projetos que visam a conservação do meio ambiente.</p>
+</div>
+<div class ="informacao">
+ <p>A empresa também ja conquistou vários prêmios,
+dentre eles, por dez anos consecutivos ganhou o prêmio ABF e também foi reconhecida pela pequenas empresas e grandes negócios.</p> 
+</div>
+      </div>
      
   </div>
 
@@ -38,5 +50,22 @@ header{
 main{
   color: #003d8f;
 }
-
+.informacoes{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+.informacao{
+  border-color: white;
+  border-radius: 20px;
+  background-color: white;
+  margin: 25px;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  color: black;
+  padding: 15px;
+  font-size: 25px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.514);
+}
 </style>
