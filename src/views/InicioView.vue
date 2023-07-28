@@ -15,8 +15,15 @@
    </header>
 
   <div id="paginaInicial">
-  
-      <h1>Restaura Jeans</h1>
+  <div id="titulo">
+    <!-- <div > -->
+      <h1 class="nomeEmpresa">
+        <div class="titulo-part1">Restaura</div> 
+        <div class="titulo-part2">Jeans</div></h1> 
+    <!-- </div> -->
+    <h2 id="slogan">A solução para a sua roupa</h2>
+    </div>
+      
       <div class="informacoes">
 <div class="informacao">
   <p>A primeira unidade foi criada na cidade de Santa Maria/RS, uma cidade militar e universitária.O cenário perfeito para a criação do pequeno espaço que viria a ser um verdadeiro laboratório para a marca.</p>
@@ -29,7 +36,12 @@
 dentre eles, por dez anos consecutivos ganhou o prêmio ABF e também foi reconhecida pela pequenas empresas e grandes negócios.</p> 
 </div>
       </div>
-     
+     <div id="servicos">
+<img src="maquina-Sfundo.png" alt="" class="servico">
+<img src="maqLavar-Sfundo.png" alt="" class="servico">
+<img src="calca-Sfundo.png" alt="" class="servico">
+<img src="produto-Sfundo.png" alt="" class="servico">
+</div>
   </div>
 
   <footer>
@@ -40,6 +52,41 @@ dentre eles, por dez anos consecutivos ganhou o prêmio ABF e também foi reconh
 </template>
 
 <style scoped>
+.servico{
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  margin: 20px;
+}
+.nomeEmpresa {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+#titulo{
+  background-color: rgba(255, 255, 255, 0.582);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: left;
+}
+.titulo-part1{
+  color: #BB1903;
+}
+.titulo-part2{
+  margin-left: .75rem;
+  color: #0A376B;
+}
+#slogan{
+  color: #403838;
+  text-align: left;
+}
 footer{
   background-color: #003e8faf;
 
