@@ -29,7 +29,8 @@ function toggleProduto() {
   produto.value = !produto.value
   console.log(produto.value)
 }
-
+const usuario = ref('')
+const senha = ref('')
 </script>
 
 <template>
@@ -55,7 +56,7 @@ function toggleProduto() {
       <!-- </div> -->
       <h2 id="slogan">A solução para a sua roupa</h2>
     </div>
-    mouseout
+   
     <div class="informacoes">
       <div class="informacao">
         <p>A primeira unidade foi criada na cidade de Santa Maria/RS, uma cidade militar e universitária.O cenário
@@ -85,7 +86,35 @@ function toggleProduto() {
         @mouseover="toggleProduto" @mouseleave="toggleProduto">
 
     </div>
+
+    <div id="area-do-usuario">
+ <h1>Entre com a sua conta</h1>
+ <div id="area-login">
+  <div class="login">
+  <h2>Login</h2>
+  <div class="usuario">
+    <label for="usuario">Nome do Usuário:</label>
+  <input type="text" v-model="usuario" v-on:keypress="enviar = false"
+ required />
+ </div>
+ <div class="senha">
+  <label for="senha">Senha:</label>
+  <input type="password" v-model="senha" v-on:keypress="enviar = false" required />
+ </div>
+ <div class="btn-enviar">
+  <button type="submit">Entrar</button>
+ </div>
+ <div class="fazer-login">
+  <router-link to="/sacola">Fazer Cadastro</router-link>
+ </div>
+ </div>
+ <div class="texto-login">
+  <p>Você pode ter uma experiência melhor entrando na sua conta, se ainda não tiver cadastro. Aproveite e faça agora!</p>
+ </div>
+ </div>
+    </div>
   </div>
+
 
   <footer>
     <h2>Restaura Jeans Joinville - SC</h2>
@@ -95,6 +124,22 @@ function toggleProduto() {
 </template>
 
 <style scoped>
+.login{
+  display: flex;
+  flex-direction: row;
+  align-items: left ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  border-radius: 25px;
+  background-color: #ffffff88;
+}
+#area-login{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
 .servico:hover {
   cursor: pointer;
   transform: scale(1.2);
