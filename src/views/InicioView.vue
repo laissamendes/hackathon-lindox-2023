@@ -73,39 +73,40 @@ const senha = ref('')
       </div>
     </div>
     <div id="servicos">
-      <img :src="maquina ? '../../maquina-Cfundo.png' : '../../maquina-Sfundo.png'" alt="" class="servico"
-        @mouseover="toggleMaquina" @mouseleave="toggleMaquina">
+      <router-link to="/costura"><img :src="maquina ? '../../maquina-Cfundo.png' : '../../maquina-Sfundo.png'" alt="" class="servico"
+        @mouseover="toggleMaquina" @mouseleave="toggleMaquina"></router-link>
+        <router-link to="/lavanderia"><img :src="maqLavar ? '../../maqLavar-Cfundo.png' : '../../maqLavar-Sfundo.png'" alt="" class="servico"
+        @mouseover="toggleMaqLavar" @mouseleave="toggleMaqLavar"></router-link>
 
-      <img :src="maqLavar ? '../../maqLavar-Cfundo.png' : '../../maqLavar-Sfundo.png'" alt="" class="servico"
-        @mouseover="toggleMaqLavar" @mouseleave="toggleMaqLavar">
+        <router-link to="/tingimento"><img :src="calca ? '../../calca-Cfundo.png' : '../../calca-Sfundo.png'" alt="" class="servico"
+        @mouseover="toggleCalca" @mouseleave="toggleCalca"></router-link>
 
-      <img :src="calca ? '../../calca-Cfundo.png' : '../../calca-Sfundo.png'" alt="" class="servico"
-        @mouseover="toggleCalca" @mouseleave="toggleCalca">
+        <router-link to="/produtos"><img :src="produto ? '../../produto-Cfundo.png' : '../../produto-Sfundo.png'" alt="" class="servico"
+        @mouseover="toggleProduto" @mouseleave="toggleProduto"></router-link>
 
-      <img :src="produto ? '../../produto-Cfundo.png' : '../../produto-Sfundo.png'" alt="" class="servico"
-        @mouseover="toggleProduto" @mouseleave="toggleProduto">
+      
 
     </div>
 
     <div id="area-do-usuario">
- <h1>Entre com a sua conta</h1>
+ <h1 style="text-align: center;">Entre com a sua conta</h1>
  <div id="area-login">
   <div class="login">
   <h2>Login</h2>
   <div class="usuario">
-    <label for="usuario">Nome do Usuário:</label>
+    <label for="usuario">Nome do Usuário:</label><br>
   <input type="text" v-model="usuario" v-on:keypress="enviar = false"
  required />
  </div>
  <div class="senha">
-  <label for="senha">Senha:</label>
+  <label for="senha">Senha:</label><br>
   <input type="password" v-model="senha" v-on:keypress="enviar = false" required />
  </div>
- <div class="btn-enviar">
+ <div class="btn-entrar">
   <button type="submit">Entrar</button>
  </div>
  <div class="fazer-login">
-  <router-link to="/sacola">Fazer Cadastro</router-link>
+  <router-link to="/sacola" style="color:#42349eb2 ;">Fazer Cadastro</router-link>
  </div>
  </div>
  <div class="texto-login">
@@ -124,6 +125,74 @@ const senha = ref('')
 </template>
 
 <style scoped>
+
+.texto-login{
+  width: 400px;
+  height: 350px;
+text-align: center;}
+.login > h2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}
+.fazer-login, .btn-entrar{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login{
+  width: 400px;
+  height: 350px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto-login{
+  color: white;
+  font-size: 25px;
+}
+#area-do-usuario{
+  color: #42349eb2;
+}
+input{
+  border-radius: 10px;
+  border-style: none;
+  background-color: #4331317c;
+  height: 30px;
+  width: 300px;
+  margin: 10px;
+  
+}
+#paginaInicial{
+  color: black;
+}
+.login > .btn-entrar > button{
+  border-style: none;
+  border-radius: 20px;
+  background-color: #42349e8f;
+  color: white;
+  width: 150px;
+  height: 35px;
+  font-size: 20px;
+}
+.login > .btn-entrar > button:hover{
+  background-color: #42349ec7;
+}
 .login{
   display: flex;
   flex-direction: row;
@@ -201,11 +270,11 @@ footer {
 
 header {
   background-color: #003e8faf;
+  position: sticky; 
+top: 10px;
 }
 
-main {
-  color: #003d8f;
-}
+
 
 .informacoes {
   display: grid;

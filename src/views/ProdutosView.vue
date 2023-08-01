@@ -34,9 +34,9 @@ footer{
 }
 header{
   background-color: #00afc2b9;
+  position: sticky; 
+top: 10px;
 }
-main{
-  color: #003d8f;
-}
+
 
 </style>
