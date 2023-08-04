@@ -14,9 +14,9 @@
   </div>
    </header>
 
-  <div id="localLojas">
+  <div id="pagina-geral">
   
-      <h1>Lojas</h1>
+      <img src="celular.png" alt="" style="border-radius:50px ;">
      
   </div>
 

@@ -89,12 +89,12 @@ const senha = ref('')
     </div>
 
     <div id="area-do-usuario">
- <h1 style="text-align: center;">Entre com a sua conta</h1>
+ <h1 style="text-align: center; margin-bottom: 95px; font-size: 50px;">Entre com a sua conta</h1>
  <div id="area-login">
   <div class="login">
   <h2>Login</h2>
   <div class="usuario">
-    <label for="usuario">Nome do Usuário:</label><br>
+    <label for="usuario">Usuário:</label><br>
   <input type="text" v-model="usuario" v-on:keypress="enviar = false"
  required />
  </div>
@@ -109,7 +109,7 @@ const senha = ref('')
   <router-link to="/sacola" style="color:#42349eb2 ;">Fazer Cadastro</router-link>
  </div>
  </div>
- <div class="texto-login">
+ <div class="texto-login" style="font-size: 50px;">
   <p>Você pode ter uma experiência melhor entrando na sua conta, se ainda não tiver cadastro. Aproveite e faça agora!</p>
  </div>
  </div>
@@ -125,11 +125,21 @@ const senha = ref('')
 </template>
 
 <style scoped>
-
+#area-do-usuario{
+  background-image: url('bolhas.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 100px;
+  padding: 100px;
+}
 .texto-login{
   width: 400px;
   height: 350px;
-text-align: center;}
+text-align: center;
+}
+.texto-login > p{
+ font-size: 25px;
+}
 .login > h2{
   display: flex;
   flex-direction: row;
@@ -163,7 +173,7 @@ text-align: center;}
 }
 
 .texto-login{
-  color: white;
+  color:  #42349e8f;
   font-size: 25px;
 }
 #area-do-usuario{
@@ -189,6 +199,7 @@ input{
   width: 150px;
   height: 35px;
   font-size: 20px;
+  margin-top: 15px;
 }
 .login > .btn-entrar > button:hover{
   background-color: #42349ec7;
@@ -227,6 +238,7 @@ input{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
+  margin-top: 150px;
 }
 
 .nomeEmpresa {
@@ -234,7 +246,7 @@ input{
   flex-direction: row;
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -247,6 +259,9 @@ input{
   justify-content: center;
   align-items: center;
   text-align: left;
+  margin-top: 200px;
+  height: 300px;
+  font-size: 30px;
 }
 
 .titulo-part1 {
@@ -280,6 +295,7 @@ top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
+  margin-top: 550px;
 }
 
 .informacao {
