@@ -1,4 +1,7 @@
 <script setup>
+import { ref } from 'vue'
+
+const cidade = ref('')
 </script>
 
 <template>
@@ -16,8 +19,21 @@
 
   <div id="pagina-geral">
   
-      <img src="celular.png" alt="" style="border-radius:50px ;">
-     
+    <div class="texto">
+      <h2>Já somos mais de 200 em  todo Brasil!</h2>
+    </div>
+      <img src="celular.png" alt="" style="border-radius:50px;">
+      <h1>Encontre a Restaura Jeans mais próxima de você!</h1>
+      <h4>Insira seu estado:</h4>
+        <select v-model="cidade" v-on:keypress="enviar = false">
+          <option value="JLLE">Joinville</option>
+          <option value="AR">Araquari</option>
+          <option value="BV">Barra Velha</option>
+          <option value="BBS">Balneário Barra do Sul</option>
+          <option value="JS">Jaraguá do Sul</option>
+          <option value="SF">São Francisco do Sul</option>
+        </select>
+        <button type="submit">Enviar</button>
   </div>
 
   <footer>
@@ -28,6 +44,25 @@
 </template>
 
 <style scoped>
+img{
+  display: flex;
+  flex-direction: row;
+  align-items: left ;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+.texto{
+  display: flex;
+  flex-direction: row;
+  align-items: left ;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  border-radius: 25px;
+  background-color: #003e8faf;
+  color: white;
+}
 footer{
   background-color: #003e8faf;
 

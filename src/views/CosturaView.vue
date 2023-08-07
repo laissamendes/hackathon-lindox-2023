@@ -16,8 +16,18 @@
 
   <div id="paginaCostura">
   
-      <h1>Costura</h1>
-     
+<h1>COSTURA</h1>
+<div>
+  <div>
+    <p>Precisa ajustar, aumentar ou diminuir cós, fazer barra ou um cerzido? A Restaura entende.</p>
+  </div>
+  <div>
+    <p>Nossos serviços são executados na própria franquia, por um time especializado que recebe treinamentos constantes, garantindo mais agilidade e qualidade para você.</p>
+  </div>
+  <div>
+    <p>Contamos com profissionais especializados para realizar qualquer tipo de reparo ou conserto, nos mais variados tipos de tecidos. </p>
+  </div>
+</div>     
   </div>
 
   <footer>
