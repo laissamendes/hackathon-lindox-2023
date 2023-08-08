@@ -17,17 +17,24 @@
   <div id="paginaCostura">
   
 <h1>COSTURA</h1>
-<div>
-  <div>
+<div id="informacoes-costura">
+  <div class="info">
     <p>Precisa ajustar, aumentar ou diminuir cós, fazer barra ou um cerzido? A Restaura entende.</p>
   </div>
-  <div>
+  <div class="info">
     <p>Nossos serviços são executados na própria franquia, por um time especializado que recebe treinamentos constantes, garantindo mais agilidade e qualidade para você.</p>
   </div>
-  <div>
+  <div class="info">
     <p>Contamos com profissionais especializados para realizar qualquer tipo de reparo ou conserto, nos mais variados tipos de tecidos. </p>
   </div>
 </div>     
+<div class="imagens">
+  <img src="imagem-costura1.png" alt="" width="395">
+  <img src="imagem-costura2.png" alt="" width="395">
+  <img src="imagem-costura3.png" alt="" width="395">
+  <img src="imagem-costura4.png" alt="" width="395">
+
+</div>
   </div>
 
   <footer>
@@ -38,6 +45,41 @@
 </template>
 
 <style scoped>
+.imagens{
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+h1{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  color: white;
+  background-color: #6fc400b0;
+ border-radius: 50%;
+}
+#informacoes-costura{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  color: #4B8402;
+}
+.info{
+  border-color: white;
+  border-radius: 20px;
+  background-color: white;
+  width: 350px;
+  height: 200px;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+}
 footer{
   background-color: #6fc400b0;
 

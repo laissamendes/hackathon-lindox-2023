@@ -16,8 +16,16 @@
 
   <div id="lavanderia">
   
-      <h1>Lavanderia</h1>
-     
+      <div class="texto-inicial">
+        <p>Com tecnologia de última geração e profissionais especializados, a rede investe pesado para garantir maior comodidade para sua vida. Além de poupar tempo, o serviço de lavanderia deixa suas roupas macias e cheirosas como nunca.</p>
+      </div>
+      <h2>Conheça o que podemos fazer por você</h2>
+     <div class="servicos">
+      <img src="img-casa.png" alt="" class="servico">
+      <img src="img-vestido.png" alt="" class="servico">
+      <img src="img-sapato.png" alt="" class="servico">
+      <img src="img-terno.png" alt="" class="servico">
+     </div>
   </div>
 
   <footer>
@@ -28,6 +36,37 @@
 </template>
 
 <style scoped>
+.servico{
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  margin: 20px;
+  overflow: hidden;
+  transition: .5s all
+}
+.servico:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+.servicos{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  margin-top: 150px;
+}
+.texto-inicial{
+  color: white;
+  font-size: 25px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 200px;
+
+  background-color:  #00a2ffb2;
+}
 footer{
   background-color: #00a2ffb2;
 
