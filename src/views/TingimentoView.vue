@@ -16,7 +16,17 @@
 
   <div id="tingimento">
   
-      <h1>Tingimento</h1>
+      <h1>+ DE 5 MILHÕES DE PESSOAS JÁ COMPROVARAM NOSSO TINGIMENTO</h1>
+<img src="tingimento.png" alt="" class="calca">
+      <div class="texto">
+        <p>Podem ser tingidas, desde as mais básicas vestimentas até tapetes, colchas, redes de descanso, toalhas e roupões. Para isso, basta que o tecido tenha no mínimo 60% de algodão. O processo usado por nossa rede de franquias é o mesmo utilizado pela indústria da moda na confecção de peças novas.</p>
+      </div>
+
+      <div id="imagens">
+        <img src="tingimento2.png" alt="" width="350px" style="margin: 70px;">
+        <img src="tingimento3.png" alt="" width="350px" style="margin: 70px;">
+        <img src="tingimento4.png" alt="" width="350px" style="margin: 70px;">
+      </div>
      
   </div>
 
@@ -28,13 +38,36 @@
 </template>
 
 <style scoped>
+#imagens{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#tingimento{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.texto{
+  width: 650px;
+  font-size: 25px;
+  color: #ff3131ad;
+}
+h1{
+  color: #ff3131ad;
+}
 footer{
   background-color: #ff3131ad;
 
 }
 header{
   background-color: #ff3131ad;
-  position: sticky; 
+  position: sticky;
 top: 10px;
 }
 
