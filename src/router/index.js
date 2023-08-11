@@ -7,6 +7,7 @@ import TingimentoView from '../views/TingimentoView.vue'
 import ProdutosView from '../views/ProdutosView.vue'
 import SacolaView from '../views/SacolaView.vue'
 
+import { setCurrentPage } from '../_data/page'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,6 +48,11 @@ const router = createRouter({
       component: SacolaView
     }
   ]
+})
+
+router.beforeEach((to, from) => {
+  setCurrentPage(to.name)
+  return true
 })
 
 export default router

@@ -1,19 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url("fundo.png" );
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#app {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  /* background-color: #fff;
-  opacity: 0.7; */
-  height: 100vh;
 }
 .menu{
   display: flex;
