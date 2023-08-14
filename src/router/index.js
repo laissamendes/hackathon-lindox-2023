@@ -6,6 +6,8 @@ import CosturaView from '../views/CosturaView.vue'
 import TingimentoView from '../views/TingimentoView.vue'
 import ProdutosView from '../views/ProdutosView.vue'
 import SacolaView from '../views/SacolaView.vue'
+import PaginaLoginView from '../views/PaginaLoginView.vue'
+
 
 import { setCurrentPage } from '../_data/page'
 
@@ -46,6 +48,11 @@ const router = createRouter({
       path: '/sacola',
       name: 'sacola',
       component: SacolaView
+    },
+    {
+      path: '/pagina-login',
+      name: 'pagina-login',
+      component: PaginaLoginView
     }
   ]
 })

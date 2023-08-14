@@ -61,7 +61,7 @@ h1{
   align-items: center;
   text-align: left;
   color: white;
-  background-color: #6fc400b0;
+  background-color:  #6fc400b0;
  border-radius: 50%;
 }
 #informacoes-costura{

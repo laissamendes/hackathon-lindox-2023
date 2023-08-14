@@ -106,7 +106,7 @@ const senha = ref('')
   <button type="submit">Entrar</button>
  </div>
  <div class="fazer-login">
-  <router-link to="/sacola" style="color:#42349eb2 ;">Fazer Cadastro</router-link>
+  <router-link to="/pagina-login" style="color:#42349eb2 ;">Fazer Cadastro</router-link>
  </div>
  </div>
  <div class="texto-login" style="font-size: 50px;">
