@@ -1,5 +1,4 @@
-<script >
-const produtos = [
+export const produtos = [
     {
         id: 1,
         descricao: "Lava-Roupas Líquido Concentrado Lavanderia Profissional Omo Perfect White",
@@ -55,4 +54,3 @@ const produtos = [
         imagem: "https://a-static.mlcdn.com.br/800x560/esfregadeira-tabua-de-lavar-roupa-olibox/olibox/21-03/74597bd640b55d2cefeeaaa68889dbf8.jpeg"
     }
 ]
-</script>

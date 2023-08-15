@@ -1,4 +1,5 @@
 <script setup>
+import ListagemProdutos from '@/components/ListagemProdutos.vue'
 </script>
 
 <template>
@@ -17,7 +18,7 @@
   <div id="produtos">
   
       <h1>Produtos</h1>
-     
+      <listagem-produtos />
   </div>
 
   <footer>

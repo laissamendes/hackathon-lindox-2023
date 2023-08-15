@@ -39,8 +39,8 @@ function handleFileUpload(e) {
     </div>
     <div id="area-preenchimento">
         
-    <form @submit.prevent="enviar = confirmacao()">
       <h1>Cadastro</h1>
+      <form @submit.prevent="enviar = confirmacao()">
       <div class="nome">
         <input
           type="text"
@@ -100,6 +100,7 @@ required />
           required
         />
       </div>
+      <div>
       <input
           type="file"
           id="imagem"
@@ -107,8 +108,9 @@ required />
         />      
       </div>
       <button type="submit">Enviar</button>
-      <div id="msgErro"><p>{{ msgErro }}</p></div>
+    </form>
 
     </div>
-    
+    <div id="msgErro"><p>{{ msgErro }}</p></div>
+
 </template>
