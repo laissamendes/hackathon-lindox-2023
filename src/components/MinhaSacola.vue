@@ -1,5 +1,5 @@
 <script setup>
-import {sacola, atualizaQuantidadeItem, removerItemSacola} from '@/_data/sacola.js'
+import { sacola, atualizaQuantidadeItem, removerItemSacola } from '@/_data/sacola.js'
 
 
 function formatarPreco(preco) {
@@ -42,7 +42,7 @@ import SacolaVazia from "@/components/SacolaVazia.vue";
             </div>
           </div>
         </div>
-        <meu-botao class="primario" text="Limpar Sacola"/>
+        <meu-botao text="Limpar Sacola"/>
         <p class="sacola-total">Total: {{ formatarPreco(sacola.total) }}</p>
       </div>
     </div>

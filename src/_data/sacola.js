@@ -17,7 +17,7 @@ const sacola = ref({
     sacola.value.itens.splice(index, 1)
   }
   
-  function adicionarASacola(livro) {
+  function adicionarASacola(produto) {
     const index = sacola.value.itens.findIndex((item) => item.id === produto.id)
     if (index === -1) {
       sacola.value.itens.push({
@@ -28,7 +28,7 @@ const sacola = ref({
       sacola.value.total += produto.price
     } else {
       sacola.value.itens[index].quantidade++
-      sacola.value.itens[index].total += livro.price
+      sacola.value.itens[index].total += produto.price
       sacola.value.total += produto.price
     }
   }
