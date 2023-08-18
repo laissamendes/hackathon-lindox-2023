@@ -7,45 +7,46 @@ const emit = defineEmits(['adicionarASacola'])
 function formatarPreco(preco) {
   return 'R$ ' + preco.toFixed(2).replace('.', ',')
 }
-
+import MeuBotao from '@/components/MeuBotao.vue'
 </script>
 
 <template>
     <div class="card-produto">
         <div class="card-info-produto">
           <div class="wrap-produto">
-            <img :src="props.produto.img" alt="Produto" class="produto" />
+            <img :src="props.produto.imagem" alt="Produto" class="produto" />
           </div>
-          <p class="titulo-produto">{{ props.produto.title }}</p>
-          <p class="preco-produto">{{ formatarPreco(props.produto.price) }}</p>
+          <p class="titulo-produto">{{ props.produto.descricao }}</p>
+          <p class="preco-produto">{{ formatarPreco(props.produto.preco) }}</p>
         </div>
         <div class="card-buttons-produtos">
-          
+          <meu-botao class="info" @click="emit('adicionarAoCarrinho', props.produto)">Adicionar a Sacola</meu-botao>
         </div>
       </div>
 </template>
 
 <style scoped>
+.preco-produto{
+  color: #00B0C2;
+  text-align: center;
+  font-size: 25px;
+}
 .card-produto {
   margin: 5px 10px;
   padding: 10px;
-  background-color: rgb(129, 192, 252);
   border-radius: 10px;
   width: 180px;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  color: white;
+  text-align: center;
+  flex-direction: column;
+  color: #4B4B4B;
 }
 
 .wrap-produto {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: white;
   border-radius: 10px;
-  width: 180px;
-  height: 270px;
+
 }
 .produto {
   width: 90%;
@@ -57,7 +58,7 @@ function formatarPreco(preco) {
 }
 
 .card-produto .titulo-produto {
-  font-weight: bold;
   margin-bottom: 5px;
+  text-align: center;
 }
 </style>

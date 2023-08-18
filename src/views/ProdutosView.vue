@@ -1,5 +1,7 @@
 <script setup>
-import ListagemProdutos from '@/components/ListagemProdutos.vue'
+import CardProduto from '@/components/CardProduto.vue'
+import { produtos } from '@/_data/produtos.js'
+import { adicionarASacola} from '@/_data/sacola.js'
 </script>
 
 <template>
@@ -18,7 +20,7 @@ import ListagemProdutos from '@/components/ListagemProdutos.vue'
   <div id="produtos">
   
       <h1>Produtos</h1>
-      <listagem-produtos />
+      <card-produto v-for="produto in produtos" :produto="produto" :key="produto.id" @adicionarASacola="adicionarASacola"/>
   </div>
 
   <footer>

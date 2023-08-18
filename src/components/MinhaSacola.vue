@@ -1,13 +1,13 @@
 <script setup>
 import { sacola, atualizaQuantidadeItem, removerItemSacola } from '@/_data/sacola.js'
-
+import MeuBotao from "@/components/MeuBotao.vue";
+import SacolaVazia from "@/components/SacolaVazia.vue";
 
 function formatarPreco(preco) {
   return 'R$ ' + preco.toFixed(2).replace('.', ',')
 }
 
-import MeuBotao from "@/components/MeuBotao.vue";
-import SacolaVazia from "@/components/SacolaVazia.vue";
+
 </script>
 <template >
 <div id="sacola">
@@ -36,6 +36,7 @@ import SacolaVazia from "@/components/SacolaVazia.vue";
                       min="1"
                     />
                   </p>
+                  <meu-botao class="primario" @click="removerItemSacola(item)"></meu-botao>
                   <p>Total: {{ formatarPreco(item.total) }}</p>
                 </div>
               </div>
