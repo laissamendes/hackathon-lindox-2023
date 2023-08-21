@@ -51,7 +51,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  text-align: left;
+  margin-top: 200px;
+  height: 100%;
 }
 h1{
   align-items: center;
@@ -62,13 +63,14 @@ h1{
   text-align: left;
   color: white;
   background-color:  #6fc400b0;
- border-radius: 50%;
+  margin-top: 100px;
 }
 #informacoes-costura{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
   color: #4B8402;
+  margin-top: 150px;
 }
 .info{
   border-color: white;
@@ -79,6 +81,8 @@ h1{
   text-align: center;
   padding: 10px;
   font-size: 20px;
+  display: flex;
+  flex-direction: row;
 }
 footer{
   background-color: #6fc400b0;

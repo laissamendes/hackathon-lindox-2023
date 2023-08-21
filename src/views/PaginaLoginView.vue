@@ -84,7 +84,7 @@ required />
       </div>
       <div class="telefone">
         <input
-          type="number"
+          type="text"
           v-model="telefone"
           v-on:keypress="enviar = false"
           placeholder="Tel.:"
@@ -93,7 +93,7 @@ required />
       </div>
       <div class="cpf">
         <input
-          type="number"
+          type="text"
           v-model="cpf"
           v-on:keypress="enviar = false"
           placeholder="CPF:"
@@ -114,3 +114,4 @@ required />
     <div id="msgErro"><p>{{ msgErro }}</p></div>
 
 </template>
+

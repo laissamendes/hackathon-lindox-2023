@@ -64,8 +64,12 @@
   align-items: center;
   text-align: center;
   margin-top: 200px;
-
+  height: 200px;
   background-color:  #00a2ffb2;
+}
+.texto-inicial > p{
+height: 150px;
+width: 500px;
 }
 footer{
   background-color: #00a2ffb2;
@@ -76,6 +80,8 @@ header{
   position: sticky; 
 top: 10px;
 }
-
+h2{
+  
+}
 
 </style>

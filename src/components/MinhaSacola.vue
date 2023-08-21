@@ -108,8 +108,6 @@ function formatarPreco(preco) {
   width: 30px;
   margin-right: 10px;
 }
-.sacola {
-  /* min-width: 20%; */
-}
+
 
 </style>
