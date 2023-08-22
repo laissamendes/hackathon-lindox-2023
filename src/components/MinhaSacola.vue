@@ -49,13 +49,8 @@ function formatarPreco(preco) {
     </div>
 
   </div>
-
-  <footer>
-    <h2>Restaura Jeans Joinville - SC</h2>
-    <p>Av. Getúlio Vargas, 627 - Bucarein, Joinville - SC, 89202-205</p>
-    <h3>(47) 99669-5838</h3>
-  </footer>
 </template>
+
 <style scoped>
 .wrap-sacola .sacola-total {
   position: fixed;

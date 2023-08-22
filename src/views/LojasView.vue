@@ -29,10 +29,12 @@ async function buscarCep() {
   <div id="pagina-geral">
   
     <div class="texto">
-      <h2>Já somos mais de 200 em  todo Brasil!</h2>
+      <h2>Já somos mais de 200 lojas em  todo Brasil!</h2>
       </div>
-
-      <img src="celular.png" alt="" style="border-radius:50px;">
+<div id="celular">
+<img src="celular.png" alt="" style="border-radius:50px;">
+</div>
+      
       <h1>Encontre a Restaura Jeans mais próxima de você!</h1>
      
         <div class="area-de-dados">
@@ -59,6 +61,33 @@ async function buscarCep() {
 </template>
 
 <style scoped>
+input{
+  border-radius: 20px;
+  border: solid;
+  border-color: white;
+  color:#003e8f93;
+  box-shadow: inset 0 0 2px black;
+  font-size: 25px;
+  padding: 10px;
+
+}
+input:hover{
+    box-shadow: inset 0 0 5px black;
+}
+button{
+  border-radius: 20px;
+  border: solid;
+  border-color: white;
+  color:#003D8F;
+  box-shadow: inset 0 0 2px #003D8F;
+  background-color: #003e8f7c;
+  font-size: 25px;
+padding: 10px;
+}
+button:hover{
+      box-shadow: inset 0 0 5px #003e8f80;
+
+}
 .svg-wave{
   position: absolute;
  left: 0;
@@ -69,24 +98,24 @@ async function buscarCep() {
   grid-template-columns: 1fr 1fr;
   align-items: center;
 }
-img{
+#celular > img{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: right ;
-  display: flex;
   justify-content: right;
   align-items: right;
 }
 .texto{
   display: flex;
   flex-direction: row;
-  align-items: left ;
+  align-items: center ;
   display: flex;
-  justify-content: left;
-  align-items: left;
-  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
   background-color: #003e8faf;
   color: white;
+  font-size: 30px;
+  margin-top: 200px;
 }
 footer{
   background-color: #003e8faf;

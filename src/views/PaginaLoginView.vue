@@ -34,8 +34,19 @@ function handleFileUpload(e) {
 
 </script>
 <template>
-    <div id="area-finalizada">
+  <div id="pag-login">
 
+    <div id="area-finalizada">
+      <img :src="imagem" alt="" class="img_atual"/>
+      <div class="nome_atual">
+      <p>{{ nome }}</p>
+    </div>
+    <div class="dt_nascimento-atualizado">
+      <p>{{ dtNascimento.substr(8,2)+"/"+dtNascimento.substr(5,2)+"/"+dtNascimento.substr(0,4) }}</p>
+    </div>
+    <div class="email-atual">
+      <p>{{ email }}</p>
+    </div>
     </div>
     <div id="area-preenchimento">
         
@@ -107,25 +118,64 @@ required />
           @change="handleFileUpload($event)"
         />      
       </div>
-      <button type="submit">Enviar</button>
+      <button type="submit">Realizar Cadastro</button>
     </form>
 
     </div>
     <div id="msgErro"><p>{{ msgErro }}</p></div>
+  </div>
 
-    <footer>
-    <div class="svg-wave">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#003e8faf" fill-opacity="1" d="M0,128L48,144C96,160,192,192,288,197.3C384,203,480,181,576,144C672,107,768,53,864,37.3C960,21,1056,43,1152,80C1248,117,1344,171,1392,197.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-</div>
-    
-  </footer>
 </template>
 
 <style scoped>
-.svg-wave{
-  position: absolute;
- left: 0;
- width: 100%;
+#area-preenchimento{
+  margin-left: 50px;
+
+}
+  #pag-login{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+#area-finalizada{
+  background-color: #003e8faf;
+}
+.img_atual {
+  width: '80%';
+  display: flex;
+  justify-content: center;
+}
+
+.img_atual img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+input{
+  margin: 15px;
+border-radius: 20px;
+  border: solid;
+  border-color: white;
+  color:#003e8faf;
+  box-shadow: inset 0 0 2px black;
+  font-size: 25px;
+  padding: 10px;
+
+}
+input:hover{
+    box-shadow: inset 0 0 5px black;
+}
+button{
+  border-radius: 20px;
+  border: solid;
+  border-color: white;
+  color:#003e8faf;
+    font-size: 35px;
+    padding: 10px;
+}
+button:hover{
+  box-shadow: inset 0 0 15px #003e8faf;
+
 }
 </style>
 
