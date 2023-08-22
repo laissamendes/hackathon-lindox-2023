@@ -19,6 +19,9 @@
       <div class="texto-inicial">
         <p>Com tecnologia de última geração e profissionais especializados, a rede investe pesado para garantir maior comodidade para sua vida. Além de poupar tempo, o serviço de lavanderia deixa suas roupas macias e cheirosas como nunca.</p>
       </div>
+      <div class="svg-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffff" fill-opacity="1" d="M0,64L48,85.3C96,107,192,149,288,170.7C384,192,480,192,576,165.3C672,139,768,85,864,58.7C960,32,1056,32,1152,69.3C1248,107,1344,181,1392,218.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+      </div>
       <h2>Conheça o que podemos fazer por você</h2>
      <div class="servicos">
       <img src="img-casa.png" alt="" class="servico">
@@ -29,13 +32,18 @@
   </div>
 
   <footer>
-    <h2>Restaura Jeans Joinville - SC</h2>
-    <p>Av. Getúlio Vargas, 627 - Bucarein, Joinville - SC, 89202-205</p>
-    <h3>(47) 99669-5838</h3>
+   <div class="svg-wave">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#00a2ffb2" fill-opacity="1" d="M0,32L60,80C120,128,240,224,360,234.7C480,245,600,171,720,117.3C840,64,960,32,1080,58.7C1200,85,1320,171,1380,213.3L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+   </div>
   </footer>
 </template>
 
 <style scoped>
+.svg-wave{
+  position: absolute;
+ left: 0;
+ width: 100%;
+}
 .servico{
   width: 200px;
   height: 150px;
@@ -70,10 +78,6 @@
 .texto-inicial > p{
 height: 150px;
 width: 500px;
-}
-footer{
-  background-color: #00a2ffb2;
-
 }
 header{
   background-color: #00a2ffb2;

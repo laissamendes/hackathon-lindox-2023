@@ -32,7 +32,7 @@ import MeuBotao from '@/components/MeuBotao.vue'
   font-size: 25px;
 }
 .card-produto {
-  margin: 5px 10px;
+  margin: 100px;
   padding: 10px;
   border-radius: 10px;
   width: 180px;
@@ -46,7 +46,10 @@ import MeuBotao from '@/components/MeuBotao.vue'
 .wrap-produto {
   background-color: white;
   border-radius: 10px;
-
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-direction: row;
 }
 .produto {
   width: 90%;
