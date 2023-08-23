@@ -24,10 +24,30 @@
       </div>
       <h2>Conheça o que podemos fazer por você</h2>
      <div class="servicos">
-      <img src="img-casa.png" alt="" class="servico">
-      <img src="img-vestido.png" alt="" class="servico">
-      <img src="img-sapato.png" alt="" class="servico">
-      <img src="img-terno.png" alt="" class="servico">
+      <div class="divServico">
+        <img src="img-casa.png" alt="" class="servico">
+        <span class="info">
+          Casa, mesa e banho
+        </span>
+      </div>
+      <div class="divServico">
+        <img src="img-vestido.png" alt="" class="servico">
+        <span class="info">
+          Roupas de festas
+        </span>
+      </div>
+      <div class="divServico">
+        <img src="img-sapato.png" alt="" class="servico">
+        <span class="info">
+          Tênis
+        </span>
+      </div>
+      <div class="divServico">
+        <img src="img-terno.png" alt="" class="servico">
+        <span class="info">
+          Casacos e jaquetas
+        </span>
+      </div>
      </div>
   </div>
 
@@ -43,6 +63,14 @@
   position: absolute;
  left: 0;
  width: 100%;
+ margin-top: 150px;
+}
+
+.divServico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .servico{
   width: 200px;
@@ -50,18 +78,43 @@
   border-radius: 10px;
   margin: 20px;
   overflow: hidden;
-  transition: .5s all
+  transition: .5s all;
+  margin-top: 400px;
 }
 .servico:hover {
   cursor: pointer;
-  transform: scale(1.2);
+  transform: scale(1.2) translateY(-20px);
+
+}
+
+.servico:hover ~ .info {
+  opacity: 1;
+}
+
+.info {
+  width: 200px;
+  height: 150px;
+  border-radius: 10px;
+  margin: 20px;
+  width: 100%;
+  background: #00a2ff;
+  color: white;
+  height: 50px;
+  transition: all .5s;
+  opacity: 0;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .servicos{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
-  margin-top: 150px;
 }
+
 .texto-inicial{
   color: white;
   font-size: 25px;
@@ -71,7 +124,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 200px;
+  margin-top: 150px;
   height: 200px;
   background-color:  #00a2ffb2;
 }
@@ -85,7 +138,16 @@ header{
 top: 10px;
 }
 h2{
-  
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #00a2ffb2;
+  margin-top: 600px;
+  font-size: 50px;
+
 }
 
 </style>

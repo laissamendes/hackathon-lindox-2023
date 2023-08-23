@@ -118,7 +118,7 @@ required />
           @change="handleFileUpload($event)"
         />      
       </div>
-      <button type="submit">Realizar Cadastro</button>
+      <button type="submit"  v-on:keypress="enviar = true">Realizar Cadastro</button>
     </form>
 
     </div>
@@ -142,15 +142,18 @@ required />
 }
 .img_atual {
   width: '80%';
+  align-items: center;
   display: flex;
+  flex-direction: row;
   justify-content: center;
-}
-
-.img_atual img {
-  width: 200px;
-  height: 200px;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
 }
+
+
 input{
   margin: 15px;
 border-radius: 20px;
