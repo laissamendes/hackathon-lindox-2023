@@ -6,7 +6,7 @@ const cep = ref('89209-490')
 const dadosCep = ref({})
 
 async function buscarCep() {
-  const data = await axios.get(`https://viacep.com.br/ws/${cep.value}/json`)
+  const data = await axios.get(`http://localhost:3050/api/distance/${cep.value}`)
   dadosCep.value = data.data
   cep.value=''
 }
@@ -43,10 +43,11 @@ async function buscarCep() {
         <input type="text" v-model="cep" >
         <button @click="buscarCep">Enviar</button>
       </div>
-      <div>
-      Dados: Rua: {{  dadosCep.logradouro  }} <br>
-      Bairro: {{  dadosCep.bairro }} <br>
-      Cidadae: {{ dadosCep.localidade }}
+      <div> 
+        <p>Loja mais próxima</p>
+      cidade {{  dadosCep.loja.cidade  }} <br>
+      estado {{  dadosCep.loja.estado  }} <br>
+      distancia {{  dadosCep.distancia  }} <br>
       </div>
           
         </div>
