@@ -45,9 +45,9 @@ async function buscarCep() {
       </div>
       <div> 
         <p>Loja mais próxima</p>
-      cidade {{  dadosCep.loja.cidade  }} <br>
-      estado {{  dadosCep.loja.estado  }} <br>
-      distancia {{  dadosCep.distancia  }} <br>
+      cidade {{  dadosCep?.loja?.cidade  }} <br>
+      estado {{  dadosCep?.loja?.estado  }} <br>
+      distancia {{  dadosCep?.distancia  }} <br>
       </div>
           
         </div>
