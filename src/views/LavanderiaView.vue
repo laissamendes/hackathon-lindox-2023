@@ -49,6 +49,15 @@
         </span>
       </div>
      </div>
+     <div id="valores">
+      <div class="info-valores">
+        <h1>Valores:</h1>
+        <p>De R$20,00 a R$60,00</p>
+      </div>
+      <div>
+        <p>Entre em conntato para verificar os valores!</p>
+      </div>
+     </div>
   </div>
 
   <footer>
@@ -59,6 +68,26 @@
 </template>
 
 <style scoped>
+div > #valores{
+  height: 250px;
+  width: 500px;
+  border-radius: 50px;
+  background-color: #00a2ffb7;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+#valores:hover{
+  transition: all .5s;
+}
+.info-valores > p{
+ font-size: 25px;
+}
 .svg-wave{
   position: absolute;
  left: 0;
@@ -79,7 +108,7 @@
   margin: 20px;
   overflow: hidden;
   transition: .5s all;
-  margin-top: 400px;
+  margin-top: 50px;
 }
 .servico:hover {
   cursor: pointer;
