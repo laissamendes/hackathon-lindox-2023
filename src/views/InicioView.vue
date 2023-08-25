@@ -72,6 +72,7 @@ const senha = ref('')
           grandes negócios.</p>
       </div>
     </div>
+    
     <div id="servicos">
       <router-link to="/costura"><img :src="maquina ? '../../maquina-Cfundo.png' : '../../maquina-Sfundo.png'" alt="" class="servico"
         @mouseover="toggleMaquina" @mouseleave="toggleMaquina"></router-link>
@@ -111,14 +112,43 @@ const senha = ref('')
  </div>
  <div class="texto-login" style="font-size: 50px;">
   <p>Você pode ter uma experiência melhor entrando na sua conta, se ainda não tiver cadastro. Aproveite e faça agora!</p>
+  <div id="redes-sociais">
+      <div class="instagram">
+        <img width="48" height="48" src="https://img.icons8.com/fluency/48/instagram-new.png" alt="instagram-new"/>
+        <a href="https://www.instagram.com/restaurajeansjoinville/">Instagram</a>
+      </div>
+      <div class="whatsapp">
+        <img width="48" height="48" src="https://img.icons8.com/fluency/48/whatsapp.png" alt="whatsapp"/>
+        <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5547996695838">WhatsApp</a>
+      </div>
+    </div>
  </div>
+ 
  </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-
+#redes-sociais{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.instagram, .whatsapp{
+  color: white;
+  width: 150px;
+  height: 50px;
+  background-color: #42349eb2;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 10px;
+}
 #area-do-usuario{
   background-image: url('bolhas.jpg');
   background-repeat: no-repeat;
@@ -281,7 +311,7 @@ top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  margin-top: 550px;
+  margin-top: 200px;
 }
 
 .informacao {
