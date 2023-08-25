@@ -120,7 +120,7 @@ required />
           @change="handleFileUpload($event)"
         />      
       </div>
-      <button type="submit"  v-on:keypress="enviar = true">Realizar Cadastro</button>
+      <button type="submit" v-if= "enviar=true">Realizar Cadastro</button>
     </form>
 
     </div>

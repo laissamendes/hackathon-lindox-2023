@@ -5,10 +5,12 @@ import axios from 'axios'
 const cep = ref('89209-490')
 const dadosCep = ref({})
 
+const enviar = ref(false)
 async function buscarCep() {
   const data = await axios.get(`http://localhost:3050/api/distance/${cep.value}`)
   dadosCep.value = data.data
   cep.value=''
+  enviar.value=true
 }
 
 </script>
@@ -35,16 +37,17 @@ async function buscarCep() {
 <img src="celular.png" alt="" style="border-radius:50px;">
 </div>
       
-      <h1>Encontre a Restaura Jeans mais próxima de você!</h1>
-     
+<h1 style="text-align:center ; margin-top: 500px;">Encontre a Restaura Jeans mais próxima de você!</h1>
+
         <div class="area-de-dados">
+
           <div> 
             <h4>Insira seu CEP:</h4>
         <input type="text" v-model="cep" >
         <button @click="buscarCep">Enviar</button>
       </div>
-      <div> 
-        <p>Loja mais próxima</p>
+      <div class="box-info" v-if="enviar"> 
+        <h1>Loja mais próxima</h1>
       cidade mais próxima {{  dadosCep?.loja?.cidade  }} <br>
       estado {{  dadosCep?.loja?.estado  }} <br>
       distancia {{  dadosCep?.distancia  }} <br>
@@ -62,6 +65,13 @@ async function buscarCep() {
 </template>
 
 <style scoped>
+.box-info{
+  border-radius: 20px 0px 20px 20px;
+  background-color: white;
+  width: 300px;
+  height: 200px;
+  padding-left: 10px;
+}
 input{
   border-radius: 20px;
   border: solid;
@@ -70,7 +80,7 @@ input{
   box-shadow: inset 0 0 2px black;
   font-size: 25px;
   padding: 10px;
-
+  margin-right: 10px;
 }
 input:hover{
     box-shadow: inset 0 0 5px black;
@@ -98,6 +108,7 @@ button:hover{
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  margin-top: 100px;
 }
 #celular > img{
   display: flex;
@@ -107,9 +118,7 @@ button:hover{
   align-items: right;
   margin-left: 1500px;
   position: absolute;
-  top: 0.1;
-  left: 0;
-  z-index: 1;
+  top: 100px;
 }
 .texto{
   display: flex;
@@ -131,6 +140,7 @@ header{
   background-color: #003e8faf;
   position: sticky; 
 top: 10px;
+
 }
 
 </style>

@@ -20,7 +20,7 @@ import MeuBotao from '@/components/MeuBotao.vue'
           <p class="preco-produto">{{ formatarPreco(props.produto.preco) }}</p>
         </div>
         <div class="card-buttons-produtos" style="font-size: 20px;">
-          <meu-botao class="info" @click="emit('adicionarASacola', props.produto)">Adicionar a Sacola</meu-botao>
+          <meu-botao class="info" @click="emit('adicionarASacola', props.produto)" style="font-size: 20px;">Adicionar a Sacola</meu-botao>
         </div>
       </div>
 </template>
@@ -35,6 +35,7 @@ img{
   text-align: center;
   font-size: 25px;
   margin: 10px;
+  align-items: center;
 }
 .card-produto {
   margin: 100px;
@@ -46,6 +47,7 @@ img{
   text-align: center;
   flex-direction: column;
   color: #4B4B4B;
+
 }
 
 .wrap-produto {

@@ -29,10 +29,11 @@
   </div>
 </div>     
 <div class="imagens">
-  <img src="imagem-costura1.png" alt="" width="395">
-  <img src="imagem-costura2.png" alt="" width="395">
-  <img src="imagem-costura3.png" alt="" width="395">
-  <img src="imagem-costura4.png" alt="" width="395">
+  <img src="imagem-costura1.png" alt="" width="380">
+  <img src="imagem-costura2.png" alt="" width="380">
+  <img src="imagem-costura3.png" alt="" width="390">
+  <img src="imagem-costura4.png" alt="" width="380">
+  <img src="imagem-costura5.jpg" alt="" width="380">
 
 </div>
   </div>

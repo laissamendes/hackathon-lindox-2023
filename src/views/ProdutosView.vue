@@ -43,7 +43,7 @@ top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 550px;
+  margin-top: 450px;
 }
 
 

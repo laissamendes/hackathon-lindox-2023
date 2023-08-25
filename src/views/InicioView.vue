@@ -104,7 +104,7 @@ const senha = ref('')
   <input type="password" v-model="senha" v-on:keypress="enviar = false" required />
  </div>
  <div class="btn-entrar">
-  <button type="submit">Entrar</button>
+  <button type="submit" v-if="enviar=true">Entrar</button>
  </div>
  <div class="fazer-login">
   <router-link to="/pagina-login" style="color:#42349eb2 ;">Fazer Cadastro</router-link>
