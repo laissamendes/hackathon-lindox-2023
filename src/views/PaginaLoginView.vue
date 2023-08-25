@@ -39,14 +39,16 @@ function handleFileUpload(e) {
     <div id="area-finalizada">
       <img :src="imagem" alt="" class="img_atual"/>
       <div class="nome_atual">
-      <p>{{ nome }}</p>
-    </div>
-    <div class="dt_nascimento-atualizado">
-      <p>{{ dtNascimento.substr(8,2)+"/"+dtNascimento.substr(5,2)+"/"+dtNascimento.substr(0,4) }}</p>
+      <p>Nome: {{ nome }}</p>
     </div>
     <div class="email-atual">
-      <p>{{ email }}</p>
+      <p>E-mail: {{ email }}</p>
     </div>
+    <div class="tel-atual">
+ <p>Tel.: {{ telefone }}</p>
+    </div>
+    <div class="btn-inicio">
+      <router-link to="/"><button style="border-style: none; font-size: 20px;">Voltar a página inicial</button></router-link>    </div>
     </div>
     <div id="area-preenchimento">
         
@@ -128,6 +130,19 @@ required />
 </template>
 
 <style scoped>
+.nome_atual, .email-atual, .tel-atual{
+  background-color:white ;
+  border-radius: 20px;
+  width: 500px;
+  height: 40px;
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+  padding-left: 10px ;
+}
 #area-preenchimento{
   margin-left: 50px;
 
@@ -139,18 +154,19 @@ required />
 
 #area-finalizada{
   background-color: #003e8faf;
-}
-.img_atual {
-  width: '80%';
-  align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+.img_atual {
+  width: '80%';
   width: 250px;
   height: 250px;
   border-radius: 50%;
+  margin-bottom: 15px;
+  background-color: white ;
 }
 
 
@@ -171,7 +187,7 @@ input:hover{
 button{
   border-radius: 20px;
   border: solid;
-  border-color: white;
+  border-color: rgba(255, 255, 255, 0.726);
   color:#003e8faf;
     font-size: 35px;
     padding: 10px;

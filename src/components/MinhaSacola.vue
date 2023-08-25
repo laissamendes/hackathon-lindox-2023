@@ -1,7 +1,8 @@
 <script setup>
-import { sacola, atualizaQuantidadeItem, removerItemSacola } from '@/_data/sacola.js'
+import { sacola, atualizaQuantidadeItem, removerItemSacola } from '@/_data/sacola.js';
 import MeuBotao from "@/components/MeuBotao.vue";
 import SacolaVazia from "@/components/SacolaVazia.vue";
+import TrashCanOutline from 'vue-material-design-icons/TrashCanOutline.vue'
 
 function formatarPreco(preco) {
   return 'R$ ' + preco.toFixed(2).replace('.', ',')
@@ -18,13 +19,10 @@ function formatarPreco(preco) {
         <div v-else>
           <div class="item-sacola" v-for="(item, index) in sacola.itens" :key="index">
             <div class="info-produto">
-              <div class="imagem-produto">
-                <img :src="item.img" class="icon-produto" />
-              </div>
               <div class="detalhes-produto">
                 <div>
-                  <p>{{ item.title }}</p>
-                  <p class="info-produto-preco">{{ formatarPreco(item.price) }}/un</p>
+                  <p>{{ item.descricao }}</p>
+                  <p class="info-produto-preco">{{ formatarPreco(item.preco) }}/un</p>
                 </div>
                 <div>
                   <p>
@@ -36,14 +34,13 @@ function formatarPreco(preco) {
                       min="1"
                     />
                   </p>
-                  <meu-botao class="primario" @click="removerItemSacola(item)"></meu-botao>
+                  <meu-botao class="primario" @click="removerItemSacola(item)"><trash-can-outline /></meu-botao>
                   <p>Total: {{ formatarPreco(item.total) }}</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <meu-botao text="Limpar Sacola"/>
         <p class="sacola-total">Total: {{ formatarPreco(sacola.total) }}</p>
       </div>
     </div>

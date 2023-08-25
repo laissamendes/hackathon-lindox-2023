@@ -49,15 +49,18 @@
         </span>
       </div>
      </div>
-     <div id="valores">
+     <div class="tabela-valores">
+      <div id="valores">
       <div class="info-valores">
         <h1>Valores:</h1>
         <p>De R$20,00 a R$60,00</p>
       </div>
       <div>
-        <p>Entre em conntato para verificar os valores!</p>
+        <p>Entre em contato para verificar os valores!</p>
       </div>
      </div>
+     </div>
+     
   </div>
 
   <footer>
@@ -68,6 +71,16 @@
 </template>
 
 <style scoped>
+.tabela-valores{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10px;
+}
 div > #valores{
   height: 250px;
   width: 500px;
@@ -89,7 +102,6 @@ div > #valores{
  font-size: 25px;
 }
 .svg-wave{
-  position: absolute;
  left: 0;
  width: 100%;
  margin-top: 150px;
@@ -174,7 +186,7 @@ h2{
   align-items: center;
   text-align: center;
   color: #00a2ffb2;
-  margin-top: 600px;
+  margin-top: 100px;
   font-size: 50px;
 
 }

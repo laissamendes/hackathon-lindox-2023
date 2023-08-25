@@ -7,7 +7,7 @@ const sacola = ref({
   
   function atualizaQuantidadeItem(item) {
     sacola.value.total -= item.total
-    item.total = item.price * item.quantidade
+    item.total = item.preco * item.quantidade
     sacola.value.total += item.total
   }
   
@@ -23,13 +23,13 @@ const sacola = ref({
       sacola.value.itens.push({
         ...produto,
         quantidade: 1,
-        total: produto.price
+        total: produto.preco
       })
-      sacola.value.total += produto.price
+      sacola.value.total += produto.preco
     } else {
       sacola.value.itens[index].quantidade++
-      sacola.value.itens[index].total += produto.price
-      sacola.value.total += produto.price
+      sacola.value.itens[index].total += produto.preco
+      sacola.value.total += produto.preco
     }
   }
   export {sacola, atualizaQuantidadeItem, removerItemSacola, adicionarASacola}

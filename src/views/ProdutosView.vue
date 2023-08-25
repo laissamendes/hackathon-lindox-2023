@@ -31,7 +31,6 @@ import ListagemProdutos from '@/components/ListagemProdutos.vue'
 
 <style scoped>
 .svg-wave{
-  position: absolute;
  left: 0;
  width: 100%;
 }

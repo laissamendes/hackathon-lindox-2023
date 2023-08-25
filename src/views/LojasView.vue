@@ -45,7 +45,7 @@ async function buscarCep() {
       </div>
       <div> 
         <p>Loja mais próxima</p>
-      cidade {{  dadosCep?.loja?.cidade  }} <br>
+      cidade mais próxima {{  dadosCep?.loja?.cidade  }} <br>
       estado {{  dadosCep?.loja?.estado  }} <br>
       distancia {{  dadosCep?.distancia  }} <br>
       </div>
@@ -105,6 +105,11 @@ button:hover{
   align-items: right ;
   justify-content: right;
   align-items: right;
+  margin-left: 1500px;
+  position: absolute;
+  top: 0.1;
+  left: 0;
+  z-index: 1;
 }
 .texto{
   display: flex;
