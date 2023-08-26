@@ -109,6 +109,7 @@ button:hover{
   grid-template-columns: 1fr 1fr;
   align-items: center;
   margin-top: 100px;
+  margin-left: 600px;
 }
 #celular > img{
   display: flex;
