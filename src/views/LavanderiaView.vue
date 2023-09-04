@@ -10,7 +10,7 @@
       <router-link to="/costura">COSTURA | </router-link>
       <router-link to="/tingimento">TINGIMENTO | </router-link>
       <router-link to="/produtos">PRODUTOS | </router-link>
-      <router-link to="/sacola"><img src="sacola.png" alt="" width="95" height="50"></router-link>
+      <router-link to="/sacola"><img src="@/assets/imagens/sacola.png" alt="" width="95" height="50"></router-link>
   </div>
    </header>
 
@@ -25,25 +25,25 @@
       <h2>Conheça o que podemos fazer por você</h2>
      <div class="servicos">
       <div class="divServico">
-        <img src="img-casa.png" alt="" class="servico">
+        <img src="@/assets/imagens/img-casa.png" alt="" class="servico">
         <span class="info">
           Casa, mesa e banho
         </span>
       </div>
       <div class="divServico">
-        <img src="img-vestido.png" alt="" class="servico">
+        <img src="@/assets/imagens/img-vestido.png" alt="" class="servico">
         <span class="info">
           Roupas de festas
         </span>
       </div>
       <div class="divServico">
-        <img src="img-sapato.png" alt="" class="servico">
+        <img src="@/assets/imagens/img-sapato.png" alt="" class="servico">
         <span class="info">
           Tênis
         </span>
       </div>
       <div class="divServico">
-        <img src="img-terno.png" alt="" class="servico">
+        <img src="@/assets/imagens/img-terno.png" alt="" class="servico">
         <span class="info">
           Casacos e jaquetas
         </span>

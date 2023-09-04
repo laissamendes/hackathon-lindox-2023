@@ -24,7 +24,7 @@ async function buscarCep() {
       <router-link to="/costura">COSTURA | </router-link>
       <router-link to="/tingimento">TINGIMENTO | </router-link>
       <router-link to="/produtos">PRODUTOS | </router-link>
-      <router-link to="/sacola"><img src="sacola.png" alt="" width="95" height="50"></router-link>
+      <router-link to="/sacola"><img src="@/assets/imagens/sacola.png" alt="" width="95" height="50"></router-link>
   </div>
    </header>
 
@@ -34,7 +34,7 @@ async function buscarCep() {
       <h2>Já somos mais de 200 lojas em  todo Brasil!</h2>
       </div>
 <div id="celular">
-<img src="celular.png" alt="" style="border-radius:50px;">
+<img src="@/assets/imagens/celular.png" alt="" style="border-radius:50px;">
 </div>
       
 <h1 style="text-align:center ; margin-top: 500px;">Encontre a Restaura Jeans mais próxima de você!</h1>
@@ -109,7 +109,7 @@ button:hover{
   grid-template-columns: 1fr 1fr;
   align-items: center;
   margin-top: 100px;
-  margin-left: 600px;
+  margin-left: 450px;
 }
 #celular > img{
   display: flex;

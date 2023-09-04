@@ -42,7 +42,7 @@ const senha = ref('')
       <router-link to="/costura">COSTURA | </router-link>
       <router-link to="/tingimento">TINGIMENTO | </router-link>
       <router-link to="/produtos">PRODUTOS | </router-link>
-      <router-link to="/sacola"><img src="sacola.png" alt="" widthmouseout="95" height="50"></router-link>
+      <router-link to="/sacola"><img src="@/assets/imagens/sacola.png" alt="" widthmouseout="95" height="50"></router-link>
     </div>
   </header>
 
@@ -74,15 +74,15 @@ const senha = ref('')
     </div>
     
     <div id="servicos">
-      <router-link to="/costura"><img :src="maquina ? '../../maquina-Cfundo.png' : '../../maquina-Sfundo.png'" alt="" class="servico"
+      <router-link to="/costura"><img :src="maquina ? '../../src/assets/imagens/maquina-Cfundo.png' : '../../src/assets/imagens/maquina-Sfundo.png'" alt="" class="servico"
         @mouseover="toggleMaquina" @mouseleave="toggleMaquina"></router-link>
-        <router-link to="/lavanderia"><img :src="maqLavar ? '../../maqLavar-Cfundo.png' : '../../maqLavar-Sfundo.png'" alt="" class="servico"
+        <router-link to="/lavanderia"><img :src="maqLavar ? '../src/assets/imagens/maqLavar-Cfundo.png' : '../../src/assets/imagens/maqLavar-Sfundo.png'" alt="" class="servico"
         @mouseover="toggleMaqLavar" @mouseleave="toggleMaqLavar"></router-link>
 
-        <router-link to="/tingimento"><img :src="calca ? '../../calca-Cfundo.png' : '../../calca-Sfundo.png'" alt="" class="servico"
+        <router-link to="/tingimento"><img :src="calca ? '../src/assets/imagens/calca-Cfundo.png' : '../src/assets/imagens/calca-Sfundo.png'" alt="" class="servico"
         @mouseover="toggleCalca" @mouseleave="toggleCalca"></router-link>
 
-        <router-link to="/produtos"><img :src="produto ? '../../produto-Cfundo.png' : '../../produto-Sfundo.png'" alt="" class="servico"
+        <router-link to="/produtos"><img :src="produto ? '../src/assets/imagens/produto-Cfundo.png' : '../src/assets/imagens/produto-Sfundo.png'" alt="" class="servico"
         @mouseover="toggleProduto" @mouseleave="toggleProduto"></router-link>
 
       
@@ -150,7 +150,7 @@ const senha = ref('')
   padding: 10px;
 }
 #area-do-usuario{
-  background-image: url('bolhas.jpg');
+  background-image: url('@/assets/imagens/bolhas.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 100px;

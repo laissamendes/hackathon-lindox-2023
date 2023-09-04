@@ -10,22 +10,22 @@
       <router-link to="/costura">COSTURA | </router-link>
       <router-link to="/tingimento">TINGIMENTO | </router-link>
       <router-link to="/produtos">PRODUTOS | </router-link>
-      <router-link to="/sacola"><img src="sacola.png" alt="" width="95" height="50"></router-link>
+      <router-link to="/sacola"><img src="@/assets/imagens/sacola.png" alt="" width="95" height="50"></router-link>
   </div>
    </header>
 
   <div id="tingimento">
   
       <h1>+ DE 5 MILHÕES DE PESSOAS JÁ COMPROVARAM NOSSO TINGIMENTO</h1>
-<img src="tingimento.png" alt="" class="calca">
+<img src="@/assets/imagens/tingimento.png" alt="" class="calca">
       <div class="texto">
         <p>Podem ser tingidas, desde as mais básicas vestimentas até tapetes, colchas, redes de descanso, toalhas e roupões. Para isso, basta que o tecido tenha no mínimo 60% de algodão. O processo usado por nossa rede de franquias é o mesmo utilizado pela indústria da moda na confecção de peças novas.</p>
       </div>
 
       <div id="imagens">
-        <img src="tingimento2.png" alt="" width="350px" style="margin: 70px;">
-        <img src="tingimento3.png" alt="" width="350px" style="margin: 70px;">
-        <img src="tingimento4.png" alt="" width="350px" style="margin: 70px;">
+        <img src="@/assets/imagens/tingimento2.png" alt="" width="350px" style="margin: 70px;">
+        <img src="@/assets/imagens/tingimento3.png" alt="" width="350px" style="margin: 70px;">
+        <img src="@/assets/imagens/tingimento4.png" alt="" width="350px" style="margin: 70px;">
       </div>
      
   </div>

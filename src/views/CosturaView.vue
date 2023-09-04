@@ -10,7 +10,7 @@
       <router-link to="/costura">COSTURA | </router-link>
       <router-link to="/tingimento">TINGIMENTO | </router-link>
       <router-link to="/produtos">PRODUTOS | </router-link>
-      <router-link to="/sacola"><img src="sacola.png" alt="" width="95" height="50"></router-link>
+      <router-link to="/sacola"><img src="@/assets/imagens/sacola.png" alt="" width="95" height="50"></router-link>
   </div>
    </header>
 
@@ -29,11 +29,11 @@
   </div>
 </div>     
 <div class="imagens">
-  <img src="imagem-costura1.png" alt="" width="380">
-  <img src="imagem-costura2.png" alt="" width="380">
-  <img src="imagem-costura3.png" alt="" width="390">
-  <img src="imagem-costura4.png" alt="" width="380">
-  <img src="imagem-costura5.jpg" alt="" width="380">
+  <img src="@/assets/imagens/imagem-costura1.png" alt="" width="380">
+  <img src="@/assets/imagens/imagem-costura2.png" alt="" width="380">
+  <img src="@/assets/imagens/imagem-costura3.png" alt="" width="390">
+  <img src="@/assets/imagens/imagem-costura4.png" alt="" width="380">
+  <img src="@/assets/imagens/imagem-costura5.jpg" alt="" width="380">
 
 </div>
   </div>

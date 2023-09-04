@@ -25,19 +25,19 @@ import { currentPage } from '@/_data/page.js'
 }
 
 .inicio {
-  background-image: url("fundo.png" );
+  background-image: url("@/assets/imagens/fundo.png" );
 }
 .lojas {
-  background-image: url("loja-fisica.png" );
+  background-image: url("@/assets/imagens/loja-fisica.png" );
 }
 .lavanderia{
-  background-image: url("fundo-lavanderia.png");
+  background-image: url("@/assets/imagens/fundo-lavanderia.png");
 }
 .costura{
-  background-image: url("fundo-costura.jpg");
+  background-image: url("@/assets/imagens/fundo-costura.jpg");
 }
 .produtos{
-  background-image: url("fundo-produtos.png");
+  background-image: url("@/assets/imagens/fundo-produtos.png");
 }
 router-link:hover {
   transform: scale(1.1);
