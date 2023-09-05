@@ -1,3 +1,7 @@
+# Integrantes da equipe Lidox
+Ana Clara Fidêncio Silva, Daniel Pereira Silvestre, Eduardo Kons, Guilherme Eduardo Passos, João Pedro Dums, Laíssa Mendes e Maria Eduarda Cardozo.
+
+
 # restaura_jeans
 
 This template should help get you started developing with Vue 3 in Vite.
