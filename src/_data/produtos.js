@@ -1,4 +1,4 @@
-export const produtos = [
+  export const produtos = [
     {
         id: 1,
         descricao: "Lava-Roupas Líquido Concentrado Lavanderia Profissional Omo Perfect White",

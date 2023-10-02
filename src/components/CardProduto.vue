@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps({
-    produto: Object
+  produto: Object
 })
 const emit = defineEmits(['adicionarASacola'])
 
@@ -11,32 +11,34 @@ import MeuBotao from '@/components/MeuBotao.vue'
 </script>
 
 <template>
-    <div class="card-produto">
-        <div class="card-info-produto">
-          <div class="wrap-produto">
-            <img :src="props.produto.imagem" alt="Produto" class="produto" />
-          </div>
-          <p class="titulo-produto">{{ props.produto.descricao }}</p>
-          <p class="preco-produto">{{ formatarPreco(props.produto.preco) }}</p>
-        </div>
-        <div class="card-buttons-produtos" style="font-size: 20px;">
-          <meu-botao class="info" @click="emit('adicionarASacola', props.produto)" style="font-size: 20px;">Adicionar a Sacola</meu-botao>
-        </div>
+  <div class="card-produto">
+      <div class="wrap-produto">
+        <img :src="props.produto.imagem" alt="Produto" class="produto" />
+        <p class="titulo-produto">{{ props.produto.descricao }}</p>
+        <p class="preco-produto">{{ formatarPreco(props.produto.preco) }}</p>
       </div>
+    <div class="card-buttons-produtos" style="font-size: 20px;">
+      <meu-botao class="info" @click="emit('adicionarASacola', props.produto)" style="font-size: 20px;">Adicionar a
+        Sacola</meu-botao>
+    </div>
+  </div>
 </template>
 
 <style scoped>
-img{
+
+img {
   width: 300px;
   height: 200px;
 }
-.preco-produto{
+
+.preco-produto {
   color: #00B0C2;
   text-align: center;
   font-size: 25px;
   margin: 10px;
   align-items: center;
 }
+
 .card-produto {
   margin: 100px;
   padding: 10px;
@@ -47,17 +49,20 @@ img{
   text-align: center;
   flex-direction: column;
   color: #4B4B4B;
-
+  height: 24rem;
 }
 
 .wrap-produto {
   background-color: white;
   border-radius: 10px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  text-align: center;
-  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex: 1;
 }
+
 .produto {
   width: 90%;
   max-height: 100%;
@@ -71,7 +76,7 @@ img{
   margin-bottom: 5px;
   text-align: center;
 }
-.card-buttons-produtos{
+
+.card-buttons-produtos {
   font-size: 30px;
-}
-</style>
+}</style>
