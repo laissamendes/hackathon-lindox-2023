@@ -12,7 +12,6 @@ const imagem = ref('')
 const enviar = ref(false)
 const msgErro = ref('')
 
-
 function confirmacao() {
   if (senha.value === confirmacao_senha.value) {
     msgErro.value = "";

@@ -19,6 +19,9 @@ function formatarPreco(preco) {
         <div v-else>
           <div class="item-sacola" v-for="(item, index) in sacola.itens" :key="index">
             <div class="info-produto">
+              <div class="img-produto">
+              {{ item.imagem }}
+              </div>
               <div class="detalhes-produto">
                 <div>
                   <p>{{ item.descricao }}</p>
@@ -101,5 +104,11 @@ function formatarPreco(preco) {
   margin-right: 10px;
 }
 
-
+#sacola > .sacola{
+  margin: 20px;
+  border-color: #003e8faf;
+  border-radius: 15px;
+  border-style: solid;
+  padding: 15px;
+}
 </style>

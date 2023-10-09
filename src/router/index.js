@@ -57,7 +57,7 @@ const router = createRouter({
   ]
 })
 
-router.beforeEach((to, from) => {
+router.beforeEach((to) => {
   setCurrentPage(to.name)
   return true
 })
