@@ -1,19 +1,24 @@
 <script setup>
 import { ref} from 'vue'
 
-const nome = ref('')
-const email = ref('')
-const senha = ref('')
-const confirmacao_senha = ref('')
-const dtNascimento = ref('')
-const telefone = ref('')
-const cpf = ref('')
-const imagem = ref('')
+const nome_form = ref('')
+const email_form = ref('')
+const senha_form = ref('')
+const confirmacao_senha_form = ref('')
+const dtNascimento_form = ref('')
+const telefone_form = ref('')
+const cpf_form = ref('')
+const imagem_form = ref('')
 const enviar = ref(false)
 const msgErro = ref('')
 
+const nome = ref(nome_form)
+const email = ref(email_form)
+const telefone = ref(telefone_form)
+const imagem = ref(imagem_form)
+
 function confirmacao() {
-  if (senha.value === confirmacao_senha.value) {
+  if (senha_form.value === confirmacao_senha_form.value) {
     msgErro.value = "";
     return true;
   } else {
@@ -27,7 +32,7 @@ function handleFileUpload(e) {
   if (target && target.files) {
     const file = target.files[0]
     console.log(file)
-    imagem.value = URL.createObjectURL(file)
+    imagem_form.value = URL.createObjectURL(file)
   }
 }
 
@@ -56,7 +61,7 @@ function handleFileUpload(e) {
       <div class="nome">
         <input
           type="text"
-          v-model="nome"
+          v-model="nome_form"
           v-on:keypress="enviar = false"
           placeholder="Nome:"
           required
@@ -64,13 +69,13 @@ function handleFileUpload(e) {
       </div>
       <div class="nascimento">
     
-        <input type="date" v-model="dtNascimento" v-on:keypress="enviar = false" placeholder="Nasc.:"
+        <input type="date" v-model="dtNascimento_form" v-on:keypress="enviar = false" placeholder="Nasc.:"
 required />
       </div>
       <div class="email">
         <input
           type="email"
-          v-model="email"
+          v-model="email_form"
           v-on:keypress="enviar = false"
           placeholder="E-mail:"
           required
@@ -79,7 +84,7 @@ required />
             <div class="senha">
         <input
           type="password"
-          v-model="senha"
+          v-model="senha_form"
           v-on:keypress="enviar = false"
           placeholder="Senha:"
           required
@@ -88,7 +93,7 @@ required />
       <div class="confirmacao_senha">
         <input
           type="password"
-          v-model="confirmacao_senha"
+          v-model="confirmacao_senha_form"
           v-on:keypress="enviar = false"
           placeholder="Confirme sua senha:"
           required
@@ -97,7 +102,7 @@ required />
       <div class="telefone">
         <input
           type="text"
-          v-model="telefone"
+          v-model="telefone_form"
           v-on:keypress="enviar = false"
           placeholder="Tel.:"
           required
@@ -106,7 +111,7 @@ required />
       <div class="cpf">
         <input
           type="text"
-          v-model="cpf"
+          v-model="cpf_form"
           v-on:keypress="enviar = false"
           placeholder="CPF:"
           required

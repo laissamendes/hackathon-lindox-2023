@@ -5,7 +5,6 @@ import LavanderiaView from '../views/LavanderiaView.vue'
 import CosturaView from '../views/CosturaView.vue'
 import TingimentoView from '../views/TingimentoView.vue'
 import ProdutosView from '../views/ProdutosView.vue'
-import SacolaView from '../views/SacolaView.vue'
 import PaginaLoginView from '../views/PaginaLoginView.vue'
 
 
@@ -43,11 +42,6 @@ const router = createRouter({
       path: '/produtos',
       name: 'produtos',
       component: ProdutosView
-    },
-    {
-      path: '/sacola',
-      name: 'sacola',
-      component: SacolaView
     },
     {
       path: '/pagina-login',

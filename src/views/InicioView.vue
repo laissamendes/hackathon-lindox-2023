@@ -31,6 +31,12 @@ function toggleProduto() {
 }
 const usuario = ref('')
 const senha = ref('')
+
+const showPopUpSacola = ref(false);
+
+function togglePopUpSacola() {
+  showPopUpSacola.value = !showPopUpSacola.value;
+}
 </script>
 
 <template>
@@ -42,10 +48,12 @@ const senha = ref('')
       <router-link to="/costura">COSTURA | </router-link>
       <router-link to="/tingimento">TINGIMENTO | </router-link>
       <router-link to="/produtos">PRODUTOS | </router-link>
-      <router-link to="/sacola"><img src="@/assets/imagens/sacola.png" alt="" widthmouseout="95" height="50"></router-link>
+      <img src="@/assets/imagens/sacola.png" alt="" width="95" height="50" @click="togglePopUpSacola">
     </div>
   </header>
+  <sacola v-if="showPopUpSacola">
 
+</sacola>
   <div id="paginaInicial">
     <div id="titulo">
       <!-- <div > -->

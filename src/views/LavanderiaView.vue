@@ -1,4 +1,10 @@
 <script setup>
+import { ref } from 'vue';
+const showPopUpSacola = ref(false);
+
+function togglePopUpSacola() {
+  showPopUpSacola.value = !showPopUpSacola.value;
+}
 </script>
 
 <template>
@@ -10,10 +16,12 @@
       <router-link to="/costura">COSTURA | </router-link>
       <router-link to="/tingimento">TINGIMENTO | </router-link>
       <router-link to="/produtos">PRODUTOS | </router-link>
-      <router-link to="/sacola"><img src="@/assets/imagens/sacola.png" alt="" width="95" height="50"></router-link>
+      <img src="@/assets/imagens/sacola.png" alt="" width="95" height="50" @click="togglePopUpSacola">
   </div>
    </header>
+   <sacola v-if="showPopUpSacola">
 
+</sacola>
   <div id="lavanderia">
   
       <div class="texto-inicial">
