@@ -19,13 +19,14 @@ import { currentPage } from '@/_data/page.js'
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  /* background-color: #fff;
-  opacity: 0.7; */
+   background-color: #fff;
+  /*opacity: 0.7; */
   height: 100vh;
 }
 
 .inicio {
   background-image: url("@/assets/imagens/fundo.png" );
+
 }
 .lojas {
   background-image: url("@/assets/imagens/loja-fisica.png" );

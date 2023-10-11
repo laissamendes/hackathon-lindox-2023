@@ -185,6 +185,8 @@ header{
   background-color: #00a2ffb2;
   position: sticky; 
 top: 10px;
+z-index: 99;
+
 }
 h2{
   align-items: center;

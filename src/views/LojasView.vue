@@ -147,6 +147,8 @@ header{
   background-color: #003e8faf;
   position: sticky; 
 top: 10px;
+z-index: 99;
+
 
 }
 

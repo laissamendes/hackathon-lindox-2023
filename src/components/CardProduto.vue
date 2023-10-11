@@ -18,8 +18,7 @@ import MeuBotao from '@/components/MeuBotao.vue'
         <p class="preco-produto">{{ formatarPreco(props.produto.preco) }}</p>
       </div>
     <div class="card-buttons-produtos" style="font-size: 20px;">
-      <meu-botao class="info" @click="emit('adicionarASacola', props.produto)" style="font-size: 20px;">Adicionar a
-        Sacola</meu-botao>
+      <meu-botao class="info" @click="emit('adicionarASacola', props.produto)" style="font-size: 20px">Adicionar a Sacola</meu-botao>
     </div>
   </div>
 </template>

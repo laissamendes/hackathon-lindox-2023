@@ -48,6 +48,8 @@ header{
   background-color: #00afc2b9;
   position: sticky; 
 top: 10px;
+z-index: 99;
+
 }
 #produtos{
   display: flex;
