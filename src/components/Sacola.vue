@@ -20,7 +20,7 @@ const enviar = ref(false)
     <div class="popup">
     <div class="popup-inner">
         <div class="sacola">
-      <h2>Sua Sacola <img src="@/assets/imagens/sacola.png" alt="" width="95" height="50"></h2>  
+      <h2><img src="@/assets/imagens/sacola.png" alt="" width="95" height="50"> Sua Sacola</h2>  
       <div class="wrap-sacola">
         <sacola-vazia v-if="sacola.itens.length === 0" />
         <ul v-else>
@@ -48,7 +48,6 @@ const enviar = ref(false)
                     <meu-botao style="background-color: #00afc2;" @click="removerItemSacola(item)"><trash-can-outline /></meu-botao>
                   </p>
                  
-                  <p>Total: {{ formatarPreco(item.total) }}</p>
                 </div>
               </div>
           </li>
@@ -135,6 +134,9 @@ ul li{
       list-style: none;
       display: flex;
 }
+.popup .img-produto{
+  margin-right: 20px;
+}
 .info-produto-preco{
   color: #00afc2;
   font-size: 1.2em;
@@ -142,8 +144,21 @@ ul li{
 .popup input[type="number"]{
   width: 30px;
 }
-
-.total-geral{
+.popup input{
+  border-radius: 10px;
+  border-color: #00afc2;
+  border-style: solid;
+}
+.popup >.informacoes> input{
+  margin: 10px;
+  
+}
+.popup button[type="submit"]{
+  border-radius: 10px;
+  border-color: #00afc2;
+  border-style: solid;
+}.total-geral{
       color: #00afc2;
+      font-size: 25px;
     }
 </style>
