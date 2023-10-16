@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from 'vue'
+import sacola from '@/components/Sacola.vue'
+
 import axios from 'axios'
 
 const cep = ref('89209-490')

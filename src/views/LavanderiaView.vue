@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from 'vue';
+import sacola from '@/components/Sacola.vue'
+
 const showPopUpSacola = ref(false);
 
 function togglePopUpSacola() {

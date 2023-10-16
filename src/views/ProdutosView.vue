@@ -1,6 +1,6 @@
 <script setup>
 import ListagemProdutos from '@/components/ListagemProdutos.vue'
-import Sacola from '@/components/Sacola.vue'
+import sacola from '@/components/Sacola.vue'
 import { ref } from 'vue';
 
 const showPopUpSacola = ref(false);

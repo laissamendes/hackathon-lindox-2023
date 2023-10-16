@@ -4,21 +4,36 @@ const props = defineProps({
 })
 const emit = defineEmits(['adicionarASacola'])
 
-function formatarPreco(preco) {
-  return 'R$ ' + preco.toFixed(2).replace('.', ',')
-}
 import MeuBotao from '@/components/MeuBotao.vue'
+
+
+  import { ref, onMounted } from 'vue'
+  import { supabase } from '@/lib/supabaseClient'
+
+  const produtos = ref([])
+
+  async function getProdutos() {
+    const { data } = await supabase.from('produtos').select()
+    produtos.value = data
+  }
+
+  onMounted(() => {
+    getProdutos()
+  })
 </script>
 
 <template>
   <div class="card-produto">
       <div class="wrap-produto">
         <img :src="props.produto.imagem" alt="Produto" class="produto" />
+        <p class="titulo-produto">{{ props.produto.nome }}</p>
         <p class="titulo-produto">{{ props.produto.descricao }}</p>
-        <p class="preco-produto">{{ formatarPreco(props.produto.preco) }}</p>
+        <p class="preco-produto">R$ {{ props.produto.preco }}</p>
+
       </div>
     <div class="card-buttons-produtos" style="font-size: 20px;">
-      <meu-botao class="info" @click="emit('adicionarASacola', props.produto)" style="font-size: 20px">Adicionar a Sacola</meu-botao>
+      <meu-botao class="info" @click="emit('adicionarASacola', props.produto)" style="font-size: 20px;">Adicionar a
+        Sacola</meu-botao>
     </div>
   </div>
 </template>

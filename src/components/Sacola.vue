@@ -5,11 +5,6 @@ import SacolaVazia from "@/components/SacolaVazia.vue";
 import TrashCanOutline from 'vue-material-design-icons/TrashCanOutline.vue'
 import { ref} from 'vue'
 
-
-function formatarPreco(preco) {
-  return 'R$ ' + preco.toFixed(2).replace('.', ',')
-}
-
 const nome_form = ref('')
 const data_compra_form = ref('')
 const enviar = ref(false)
@@ -31,7 +26,7 @@ const enviar = ref(false)
               </div>
               <div class="detalhes-produto">
                 <h3>{{ item.descricao }}</h3>
-                <p class="info-produto-preco">{{ formatarPreco(item.preco) }}/un</p>
+                <p class="info-produto-preco">{{ item.preco }}/un</p>
 
 
                   <div>
@@ -83,7 +78,7 @@ const enviar = ref(false)
      </div>
    
  
-     <div class="total-geral"><p>Total da Compra: {{ formatarPreco(sacola.total) }}</p></div>
+     <div class="total-geral"><p>Total da Compra: {{ sacola.total }}</p></div>
 <div class="informacoes">
   <form @submit.prevent="enviar = confirmacao()">
       <div class="nome">

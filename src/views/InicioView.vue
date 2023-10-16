@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import sacola from '@/components/Sacola.vue'
 
 const maquina = ref(false)
 
@@ -36,6 +37,7 @@ const showPopUpSacola = ref(false);
 
 function togglePopUpSacola() {
   showPopUpSacola.value = !showPopUpSacola.value;
+  console.log(showPopUpSacola.value)
 }
 </script>
 
