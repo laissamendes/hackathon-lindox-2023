@@ -20,6 +20,7 @@ import MeuBotao from '@/components/MeuBotao.vue'
   onMounted(() => {
     getProdutos()
   })
+
 </script>
 
 <template>

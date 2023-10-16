@@ -78,7 +78,7 @@ const enviar = ref(false)
      </div>
    
  
-     <div class="total-geral"><p>Total da Compra: {{ sacola.total }}</p></div>
+     <div class="total-geral"><p>Total da Compra: R${{ sacola.total }}</p></div>
 <div class="informacoes">
   <form @submit.prevent="enviar = confirmacao()">
       <div class="nome">

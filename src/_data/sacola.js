@@ -18,18 +18,18 @@ const sacola = ref({
   }
   
   function adicionarASacola(produto) {
-    const index = sacola.value.itens.findIndex((item) => item.id === produto.id)
+    const index = sacola.value.itens.findIndex((item) => item.id === produto.pk_produtos)
     if (index === -1) {
       sacola.value.itens.push({
         ...produto,
         quantidade: 1,
-        total: produto.preco
+        total: Number(produto.preco)
       })
-      sacola.value.total += produto.preco
+      sacola.value.total += Number(produto.preco)
     } else {
       sacola.value.itens[index].quantidade++
-      sacola.value.itens[index].total += produto.preco
-      sacola.value.total += produto.preco
+      sacola.value.itens[index].total += Number(produto.preco)
+      sacola.value.total += Number(produto.preco)
     }
   }
   export {sacola, atualizaQuantidadeItem, removerItemSacola, adicionarASacola}
