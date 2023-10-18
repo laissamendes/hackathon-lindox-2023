@@ -26,7 +26,6 @@ import MeuBotao from '@/components/MeuBotao.vue'
   <div class="card-produto">
       <div class="wrap-produto">
         <img :src="props.produto.imagem" alt="Produto" class="produto" />
-        <p class="titulo-produto">{{ props.produto.nome }}</p>
         <p class="titulo-produto">{{ props.produto.descricao }}</p>
         <p class="preco-produto">R$ {{ props.produto.preco }}</p>
 
