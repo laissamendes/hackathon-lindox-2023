@@ -42,6 +42,9 @@ function togglePopUpSacola() {
 </script>
 
 <template>
+  <div class="container">
+
+
   <header>
     <div class="menu">
       <router-link to="/">INÍCIO | </router-link>
@@ -53,9 +56,9 @@ function togglePopUpSacola() {
       <img src="@/assets/imagens/sacola.png" alt="" width="95" height="50" @click="togglePopUpSacola">
     </div>
   </header>
-  <sacola v-if="showPopUpSacola">
+  <sacola v-if="showPopUpSacola"></sacola>
 
-</sacola>
+
   <div id="paginaInicial">
     <div id="titulo">
       <!-- <div > -->
@@ -137,6 +140,9 @@ function togglePopUpSacola() {
  </div>
     </div>
   </div>
+
+
+</div> <!-- container-->
 </template>
 
 <style scoped>
@@ -315,9 +321,20 @@ input{
 header {
   background-color: #003e8faf;
   position: sticky; 
-top: 10px;
+/*top: 10px;*/
+/*margin-top: 10px;*/
 z-index: 99;
+
 }
+.container{
+  background-image: url("@/assets/imagens/fundo.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  padding: 10px 0 0 0;
+}
+
+
 .informacoes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -337,4 +354,11 @@ z-index: 99;
   padding: 15px;
   font-size: 25px;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.514);
-}</style>
+}
+
+.inicio {
+  background-image: url("@/assets/imagens/fundo.png" );
+  background: black !important;
+}
+
+</style>

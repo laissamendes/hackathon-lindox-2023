@@ -22,10 +22,13 @@ import { currentPage } from '@/_data/page.js'
    background-color: #fff;
   /*opacity: 0.7; */
   height: 100vh;
+  width: 100vw;
 }
 
 .inicio {
-  background-image: url("@/assets/imagens/fundo.png" );
+  /*background-image: url("@/assets/imagens/fundo.png" );*/
+  background-size: 100%;
+  background-color: red;
 
 }
 .lojas {
