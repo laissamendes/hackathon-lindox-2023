@@ -19,30 +19,36 @@ import { currentPage } from '@/_data/page.js'
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-   background-color: #fff;
+   /*background-color: #fff;*/
   /*opacity: 0.7; */
   height: 100vh;
   width: 100vw;
-}
-
-.inicio {
-  /*background-image: url("@/assets/imagens/fundo.png" );*/
   background-size: 100%;
-  background-color: red;
-
 }
-.lojas {
+.container{
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% 100vh;
+  padding: 10px 0 0 0;
+}
+
+.inicio .container{
+  background-image: url("@/assets/imagens/fundo.png" );
+}
+.lojas .container{
   background-image: url("@/assets/imagens/loja-fisica.png" );
 }
-.lavanderia{
+.lavanderia .container{
   background-image: url("@/assets/imagens/fundo-lavanderia.png");
 }
-.costura{
+.costura .container{
   background-image: url("@/assets/imagens/fundo-costura.jpg");
 }
-.produtos{
+.produtos .container{
   background-image: url("@/assets/imagens/fundo-produtos.png");
 }
+
+
 router-link:hover {
   transform: scale(1.1);
   transition: all 0.5s;

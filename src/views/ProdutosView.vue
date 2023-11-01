@@ -11,6 +11,7 @@ function togglePopUpSacola() {
 </script>
 
 <template>
+       <div class="container">
   <header > 
     <div class="menu">
     <router-link to="/">INÍCIO | </router-link>
@@ -37,6 +38,8 @@ function togglePopUpSacola() {
 </svg>
     </div>
   </footer>
+</div>
+
 </template>
 
 <style scoped>

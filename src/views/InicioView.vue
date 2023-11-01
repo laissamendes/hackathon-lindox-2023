@@ -326,15 +326,6 @@ header {
 z-index: 99;
 
 }
-.container{
-  background-image: url("@/assets/imagens/fundo.png");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: 100% 100vh;
-  padding: 10px 0 0 0;
-}
-
-
 .informacoes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

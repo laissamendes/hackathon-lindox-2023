@@ -10,6 +10,7 @@ function togglePopUpSacola() {
 </script>
 
 <template>
+   <div class="container">
   <header > 
     <div class="menu">
     <router-link to="/">INÍCIO | </router-link>
@@ -53,6 +54,7 @@ function togglePopUpSacola() {
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#6fc400b0" fill-opacity="1" d="M0,32L60,80C120,128,240,224,360,234.7C480,245,600,171,720,117.3C840,64,960,32,1080,58.7C1200,85,1320,171,1380,213.3L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
     </div>
   </footer>
+</div>
 </template>
 
 <style scoped>
