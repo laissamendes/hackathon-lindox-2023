@@ -31,6 +31,6 @@ async function getProdutos() {
 <style scoped>
 .listagem-produtos {
 display: grid;
-grid-template-columns: 1fr 1fr 1fr;
+grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 </style>
