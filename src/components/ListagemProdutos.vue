@@ -22,7 +22,7 @@ async function getProdutos() {
 
 <template>
     <div class="listagem-produtos">
-        <CardProduto v-for="produto in produtos" :key="produto.pk_produto" :produto="produto"
+        <CardProduto v-for="produto in produtoStore.produtos" :key="produto.pk_produto" :produto="produto"
             @adicionarASacola="adicionarASacola" />
     </div>
 </template>

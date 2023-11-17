@@ -1,13 +1,24 @@
 <script setup>
 import ListagemProdutos from '@/components/ListagemProdutos.vue'
 import sacola from '@/components/Sacola.vue'
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+import useProdutoStore from '@/stores/produtos';
+
+const produtoStore = useProdutoStore();
 
 const showPopUpSacola = ref(false);
 
 function togglePopUpSacola() {
   showPopUpSacola.value = !showPopUpSacola.value;
 }
+
+const isLoading = ref(false);
+
+onMounted(async () => {
+  isLoading.value = true;
+  await produtoStore.getAllProdutos('produto');
+  isLoading.value = false;
+});
 </script>
 
 <template>
@@ -28,7 +39,15 @@ function togglePopUpSacola() {
 </sacola>
   <div id="produtos">
     <div class="svg-wave" ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffffffff" fill-opacity="1" d="M0,224L120,197.3C240,171,480,117,720,122.7C960,128,1200,192,1320,224L1440,256L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg></div>
-  <listagem-produtos/>
+    {{ produtoStore.produtos }}
+  <listagem-produtos 
+/>
+<!-- <span
+  v-for="produto_id in produto.produto_ids"
+  :key="produto_id"
+> -->
+  <!-- {{ produtoStore.getProdutoName(produto_id) }}
+</span> -->
   </div>
 
   <footer>
