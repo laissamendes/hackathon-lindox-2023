@@ -5,6 +5,8 @@ import { supabase } from '@/lib/supabaseClient'
 // import { produtos } from '@/_data/produtos.js'
 import { adicionarASacola } from '@/_data/sacola.js'
 import CardProduto from '@/components/CardProduto.vue'
+// import useProdutoStore from '@/stores/produtos';
+// const produtoStore = useProdutoStore();
 
 const produtos =  ref([])
 
@@ -22,7 +24,7 @@ async function getProdutos() {
 
 <template>
     <div class="listagem-produtos">
-        <CardProduto v-for="produto in produtoStore.produtos" :key="produto.pk_produto" :produto="produto"
+        <CardProduto v-for="produto in produtos" :key="produto.pk_produtos" :descricao="produto.nome"
             @adicionarASacola="adicionarASacola" />
     </div>
 </template>
