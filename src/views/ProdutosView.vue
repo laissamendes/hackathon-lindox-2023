@@ -1,11 +1,7 @@
 <script setup>
 import ListagemProdutos from '@/components/ListagemProdutos.vue'
 import sacola from '@/components/Sacola.vue'
-import { ref, onMounted } from 'vue'
-// import useProdutoStore from '@/stores/produtos';
-import { supabase } from '@/lib/supabaseClient.js'
-
-// const produtoStore = useProdutoStore();
+import { ref } from 'vue'
 
 const showPopUpSacola = ref(false)
 
@@ -13,24 +9,6 @@ function togglePopUpSacola() {
   showPopUpSacola.value = !showPopUpSacola.value
 }
 
-// const isLoading = ref(false);
-
-// onMounted(async () => {
-//   isLoading.value = true;
-//   await produtoStore.getAllProdutos('produto');
-//   isLoading.value = false;
-// });
-
-const produtos = ref([])
-
-async function getProdutos() {
-  const { data } = await supabase.from('produtos').select().eq('pk_produtos', '11')
-  produtos.value = data
-}
-
-onMounted(() => {
-  getProdutos()
-})
 </script>
 
 <template>
@@ -63,12 +41,8 @@ onMounted(() => {
           ></path>
         </svg>
       </div>
-      <!-- {{ produtoStore.produtos }} -->
       <listagem-produtos />
-      <span v-for="produto in produtos" :key="produto.pk_produtos">
-        {{ produtos.nome }}
-        <!-- {{ produtoStore.getProdutoName(produto_id) }} -->
-      </span>
+
     </div>
 
     <footer>

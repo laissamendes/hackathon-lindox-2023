@@ -1,25 +1,10 @@
 <script setup>
+import MeuBotao from '@/components/MeuBotao.vue'
+
 const props = defineProps({
   produto: Object
 })
 const emit = defineEmits(['adicionarASacola'])
-
-import MeuBotao from '@/components/MeuBotao.vue'
-
-
-  import { ref, onMounted } from 'vue'
-  import { supabase } from '@/lib/supabaseClient'
-
-  const produtos = ref([])
-
-  async function getProdutos() {
-    const { data } = await supabase.from('produtos').select()
-    produtos.value = data
-  }
-
-  onMounted(() => {
-    getProdutos()
-  })
 
 </script>
 

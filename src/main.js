@@ -1,4 +1,4 @@
-// import 'vue-loading-overlay/dist/css/index.css';
+import 'vue-loading-overlay/dist/css/index.css';
 import './assets/main.css'
 
 import { createApp } from 'vue'
@@ -10,6 +10,5 @@ import './lib/supabaseClient'
 const app = createApp(App)
 
 app.use(router)
-// app.mount('#app')
 app.use(createPinia());
 app.mount('#app');

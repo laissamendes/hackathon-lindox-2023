@@ -1,30 +1,34 @@
 <script setup>
 import { ref, onMounted } from 'vue'
-import { supabase } from '@/lib/supabaseClient'
+import Loading from 'vue-loading-overlay'
 
-// import { produtos } from '@/_data/produtos.js'
+import { supabase } from '@/lib/supabaseClient'
 import { adicionarASacola } from '@/_data/sacola.js'
 import CardProduto from '@/components/CardProduto.vue'
-// import useProdutoStore from '@/stores/produtos';
-// const produtoStore = useProdutoStore();
+
 
 const produtos =  ref([])
 
+const isLoading = ref(false)
 
 async function getProdutos() {
-    const { data } = await supabase.from('produtos').select()
-    produtos.value = data
-  }
+  isLoading.value = true
+  const { data } = await supabase.from('produtos').select('*')
+  produtos.value = data
+  isLoading.value = false
+}
 
-  onMounted(() => {
+onMounted(() => {
     getProdutos()
   })
 
 </script>
 
 <template>
+  <loading v-model:active="isLoading" is-full-page />
+
     <div class="listagem-produtos">
-        <CardProduto v-for="produto in produtos" :key="produto.pk_produtos" :descricao="produto.nome"
+        <CardProduto v-for="produto in produtos" :key="produto.pk_produtos" :produto="produto"
             @adicionarASacola="adicionarASacola" />
     </div>
 </template>
