@@ -320,7 +320,7 @@ input{
 
 header {
   background-color: #003e8faf;
-  position: sticky; 
+  position: sticky!important;
 /*top: 10px;*/
 /*margin-top: 10px;*/
 z-index: 99;
