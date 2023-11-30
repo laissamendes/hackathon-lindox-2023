@@ -47,6 +47,9 @@ function togglePopUpSacola() {
 
   <header>
     <div class="menu">
+      <div class="menu-mb">
+      <a href="#"><v-icon icon="mdi-menu" /></a>
+    </div>
       <router-link to="/">INÍCIO | </router-link>
       <router-link to="/lojas">LOJAS | </router-link>
       <router-link to="/lavanderia">LAVANDERIA | </router-link>
@@ -55,6 +58,7 @@ function togglePopUpSacola() {
       <router-link to="/produtos">PRODUTOS | </router-link>
       <img src="@/assets/imagens/sacola.png" alt="" width="95" height="50" @click="togglePopUpSacola">
     </div>
+
   </header>
   <sacola v-if="showPopUpSacola"></sacola>
 
