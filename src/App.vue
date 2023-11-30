@@ -24,12 +24,16 @@ import { currentPage } from '@/_data/page.js'
   height: 100vh;
   width: 100vw;
   background-size: 100%;
+  max-width: 100%;
+
 }
 .container{
   background-position: center top;
   background-repeat: no-repeat;
   background-size: 100% 100vh;
   padding: 10px 0 0 0;
+  max-width: 100%;
+
 }
 
 .inicio .container{
