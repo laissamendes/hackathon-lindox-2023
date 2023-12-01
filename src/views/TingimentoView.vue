@@ -12,17 +12,23 @@ function togglePopUpSacola() {
 <template>
          <div class="container">
 
-  <header > 
+          <header>
     <div class="menu">
-    <router-link to="/">INÍCIO | </router-link>
-      <router-link to="/lojas">LOJAS | </router-link>
-      <router-link to="/lavanderia">LAVANDERIA | </router-link>
-      <router-link to="/costura">COSTURA | </router-link>
-      <router-link to="/tingimento">TINGIMENTO | </router-link>
-      <router-link to="/produtos">PRODUTOS | </router-link>
+      <input type="checkbox">
+      <a href="#" class="mb-menu">x</a>
+      <div>
+
+      <router-link to="/">INÍCIO</router-link>
+      <router-link to="/lojas">LOJAS</router-link>
+      <router-link to="/lavanderia">LAVANDERIA</router-link>
+      <router-link to="/costura">COSTURA</router-link>
+      <router-link to="/tingimento">TINGIMENTO</router-link>
+      <router-link to="/produtos">PRODUTOS</router-link>
+    </div>
       <img src="@/assets/imagens/sacola.png" alt="" width="95" height="50" @click="togglePopUpSacola">
-  </div>
-   </header>
+    </div>
+
+  </header>
    <sacola v-if="showPopUpSacola">
 
 </sacola>
@@ -79,15 +85,66 @@ function togglePopUpSacola() {
 h1{
   color: #ff3131ad;
 }
-footer{
-  background-color: #ff3131ad;
-
-}
 header{
   background-color: #ff3131ad;
   position: sticky;
 top: 10px;
 }
-
-
+div.menu a.mb-menu, div.menu input{
+    display: none;
+  }
+  div.menu{
+    padding-right: 5vw;
+  }
+  div.menu a:not(.mb-menu){
+    border-right: 2px solid white;
+    padding: 0 10px;
+  }
+  div.menu div{
+    padding-top:10px;
+  }
+  div.menu a:last-child{
+    border-right: none;
+  }
+@media (max-width: 600px) {
+  div.menu input~div a{
+    display: none;
+  }
+  div.menu{
+    position: relative;
+    padding-right: 10vw;
+  }
+  div.menu input~div{
+    top: 60px; 
+    /* altura do hedder */
+    position: absolute;
+    background: #ff3131ad;
+    left: -60px;
+    padding: 0 5px;
+  }
+  div.menu input{
+    width: 30px;
+    opacity: 0;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+  }
+  div.menu a.mb-menu{
+    z-index:1;
+  }
+  div.menu a.mb-menu, div.menu input{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -60px;
+    width: 20px;
+  }
+  div.menu input:checked~div a{
+    display: block;
+    margin: 10px 0;
+  }
+  .facet_sidebar {
+    display: none;
+  }
+}
 </style>

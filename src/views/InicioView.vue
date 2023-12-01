@@ -386,7 +386,7 @@ div.menu a.mb-menu, div.menu input{
     top: 60px; 
     /* altura do hedder */
     position: absolute;
-    background: rgba(41, 69, 1, 0.5);
+    background: #003e8faf;
     left: -60px;
     padding: 0 5px;
   }
