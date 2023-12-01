@@ -12,13 +12,17 @@ const sacola = ref({
   }
   
   function removerItemSacola(item) {
-    const index = sacola.value.itens.findIndex((i) => i.id === item.id)
-    sacola.value.total -= item.total
+    const index = sacola.value.itens.findIndex((i) => i.pk_produtos === item)
+    console.log(index)
+    console.log(sacola.value.itens[index].quantidade)
+    console.log(sacola.value.itens[index].preco)
+
+    sacola.value.total -= (sacola.value.itens[index].quantidade * sacola.value.itens[index].preco)
     sacola.value.itens.splice(index, 1)
   }
   
   function adicionarASacola(produto) {
-    const index = sacola.value.itens.findIndex((item) => item.id === produto.pk_produtos)
+    const index = sacola.value.itens.findIndex((item) => item.pk_produtos === produto.pk_produtos)
     if (index === -1) {
       sacola.value.itens.push({
         ...produto,

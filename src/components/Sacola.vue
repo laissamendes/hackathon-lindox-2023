@@ -8,6 +8,9 @@ import { ref} from 'vue'
 const nome_form = ref('')
 const data_compra_form = ref('')
 const enviar = ref(false)
+function formatarPreco(valor) {
+  return valor.toFixed(2)
+}
 
 </script>
 
@@ -40,7 +43,7 @@ const enviar = ref(false)
                       min="1"
                     />
 
-                    <meu-botao style="background-color: #00afc2;" @click="removerItemSacola(item)"><trash-can-outline /></meu-botao>
+                    <meu-botao style="background-color: #00afc2;" @click="removerItemSacola(item.pk_produtos)"><trash-can-outline /></meu-botao>
                   </p>
                  
                 </div>
@@ -78,7 +81,7 @@ const enviar = ref(false)
      </div>
    
  
-     <div class="total-geral"><p>Total da Compra: R${{ sacola.total }}</p></div>
+     <div class="total-geral"><p>Total da Compra: R${{ formatarPreco(sacola.total) }}</p></div>
 <div class="informacoes">
   <form @submit.prevent="enviar = confirmacao()">
       <div class="nome">
