@@ -81,7 +81,7 @@ function formatarPreco(valor) {
      </div>
    
  
-     <div class="total-geral"><p>Total da Compra: R${{ formatarPreco(sacola.total) }}</p></div>
+     <div class="total-geral" v-if="sacola.total > 0"><p>Total da Compra: R${{ formatarPreco(sacola.total) }}</p></div>
 <div class="informacoes">
   <form @submit.prevent="enviar = confirmacao()">
       <div class="nome">
