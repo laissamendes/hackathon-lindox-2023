@@ -8,6 +8,7 @@ import ProdutosView from '../views/ProdutosView.vue'
 import PaginaLoginView from '../views/PaginaLoginView.vue'
 
 
+
 import { setCurrentPage } from '../_data/page'
 
 const router = createRouter({
@@ -47,7 +48,7 @@ const router = createRouter({
       path: '/pagina-login',
       name: 'pagina-login',
       component: PaginaLoginView
-    }
+    },
   ]
 })
 

@@ -49,33 +49,6 @@ function formatarPreco(valor) {
                 </div>
               </div>
           </li>
-
-          <!--
-          <div class="item-sacola" v-for="(item, index) in sacola.itens" :key="index">
-            <div class="info-produto">
-              <div class="img-produto">
-              <img :src="item.imagem " alt="" width="100" height="100">
-              </div>
-               <div class="detalhes-produto">
-                <div>
-                  <p>{{ item.descricao }}</p>
-                  <p class="info-produto-preco">{{ formatarPreco(item.preco) }}/un</p>
-                </div>
-                <div>
-                  <p>
-                    Quantidade:
-                    <input
-                      type="number"
-                      v-model="item.quantidade"
-                      @change="atualizaQuantidadeItem(item)"
-                      min="1"
-                    />
-                  </p>
-                  <meu-botao style="background-color: #00afc2;" @click="removerItemSacola(item)"><trash-can-outline /></meu-botao>
-                  <p>Total: {{ formatarPreco(item.total) }}</p>
-                </div>
-
-                -->
             </ul>
         </div> 
      </div>
