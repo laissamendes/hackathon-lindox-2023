@@ -1,6 +1,5 @@
 import { reactive, computed } from 'vue'
 import { defineStore } from 'pinia'
-// import api from '../plugins/axios';
 
 export const useProdutoStore = defineStore('produto', () => {
   const state = reactive({
@@ -10,12 +9,19 @@ export const useProdutoStore = defineStore('produto', () => {
   const produtos = computed(() => state.produtos)
   const getProdutoName = (id) => state.produtos.find((produto) => produto.id === id).name
 
-  // const getAllProdutos = async (type) => {
-  //   const response = await api.get(`produto/${type}/list?language=pt-BR`);
-  //   state.produtos = response.data.genres;
-  // };
 
-  return { produtos, getProdutoName }
+const currentProduto= computed(() => state.currentProduto);
+
+  const getProdutoDetail = async (produtoId) => {
+
+    const response = await supabase
+    .from('produtos')
+    .select("*")
+    .eq('id', {produtoId})
+    state.currentProduto = response.data;
+  };
+
+  return { produtos, getProdutoName, currentProduto, getProdutoDetail };
 })
 
 export default useProdutoStore

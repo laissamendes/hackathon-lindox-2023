@@ -49,6 +49,12 @@ const router = createRouter({
       name: 'pagina-login',
       component: PaginaLoginView
     },
+    {
+      path: '/produto/:produtoId',
+      name: 'ProdutoDetails',
+      component: () => import('../views/ProdutoDetailsView.vue'),
+      props: true,
+    }
   ]
 })
 

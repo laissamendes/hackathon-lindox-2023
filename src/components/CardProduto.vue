@@ -1,17 +1,25 @@
 <script setup>
 import MeuBotao from '@/components/MeuBotao.vue'
+import { useRouter } from 'vue-router'
 
 const props = defineProps({
   produto: Object
 })
 const emit = defineEmits(['adicionarASacola'])
+const router = useRouter()
+
+
+function openProduto(produtoId) {
+  router.push({ name: 'ProdutoDetails', params: { produtoId } });
+}
 
 </script>
 
 <template>
   <div class="card-produto">
       <div class="wrap-produto">
-        <img :src="props.produto.imagem" alt="Produto" class="produto" />
+        <img :src="props.produto.imagem" alt="Produto" class="produto" @click="openProduto(produto.id)"
+/>
         <p class="titulo-produto">{{ props.produto.descricao }}</p>
         <p class="preco-produto">R$ {{ props.produto.preco }}</p>
 
