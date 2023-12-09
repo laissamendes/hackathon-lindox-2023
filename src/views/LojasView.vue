@@ -14,6 +14,7 @@ async function buscarCep() {
   cep.value=''
   enviar.value=true
 }
+
 const showPopUpSacola = ref(false);
 
 function togglePopUpSacola() {
@@ -68,7 +69,9 @@ function togglePopUpSacola() {
       estado {{  dadosCep?.loja?.estado  }} <br>
       distancia {{  dadosCep?.distancia  }} <br>
       </div>
-          
+      <div class="mapBox">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3577.7058066419036!2d-48.81831179292281!3d-26.271209903502744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1702144865775!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+    </div>
         </div>
   </div>
 
@@ -216,4 +219,33 @@ div.menu a.mb-menu, div.menu input{
     display: none;
   }
 }
+
+*{
+    margin-top: 0px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    background: #262626;
+
+}
+
+.mapBox{
+    position: relative;
+    width: 600px;
+    height: 500px;
+    background: #fff;
+
+}
+
+.mapBox iframe{
+    width: 100%;
+    height: 100%;
+}
+
 </style>
