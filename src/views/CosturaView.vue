@@ -118,7 +118,7 @@ div.menu a.mb-menu, div.menu input{
   }
   div.menu{
     padding-right: 5vw;
-  }library
+  }
   div.menu a:not(.mb-menu){
     border-right: 2px solid white;
     padding: 0 10px;

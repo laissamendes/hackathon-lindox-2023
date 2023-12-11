@@ -52,7 +52,7 @@ const router = createRouter({
     {
       path: '/produto/:produtoId',
       name: 'ProdutoDetails',
-      component: () => import('../views/ProdutoDetailsView.vue'),
+      component: () => import('../views/ProdrutosDetailsView.vue'),
       props: true,
     }
   ]
