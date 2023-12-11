@@ -10,6 +10,7 @@ const router = useRouter()
 
 
 function openProduto(produtoId) {
+  alert(produtoId)  
   router.push({ name: 'ProdutoDetails', params: { produtoId } });
 }
 
@@ -17,8 +18,9 @@ function openProduto(produtoId) {
 
 <template>
   <div class="card-produto">
+    
       <div class="wrap-produto">
-        <img :src="props.produto.imagem" alt="Produto" class="produto" @click="openProduto(produto.id)"
+        <img :src="props.produto.imagem" alt="Produto" class="produto" @click="openProduto(props.produto.pk_produtos)"
 />
         <p class="titulo-produto">{{ props.produto.descricao }}</p>
         <p class="preco-produto">R$ {{ props.produto.preco }}</p>
@@ -34,7 +36,7 @@ function openProduto(produtoId) {
 .card-produto:hover{
   cursor: pointer;
   transform: scale(1.1);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418);;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.418);
 }
 img {
   width: 300px;

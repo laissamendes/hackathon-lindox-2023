@@ -1,5 +1,7 @@
 import { reactive, computed } from 'vue'
 import { defineStore } from 'pinia'
+import { supabase } from '@/lib/supabaseClient'
+
 
 export const useProdutoStore = defineStore('produto', () => {
   const state = reactive({
@@ -17,7 +19,7 @@ const currentProduto= computed(() => state.currentProduto);
     const response = await supabase
     .from('produtos')
     .select("*")
-    .eq('id', {produtoId})
+    .eq('pk_prudutos', produtoId)
     state.currentProduto = response.data;
   };
 

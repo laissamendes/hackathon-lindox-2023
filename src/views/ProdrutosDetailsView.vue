@@ -18,6 +18,7 @@
 </script>
 
 <template>
+
   <header>
     <div class="menu">
       <input type="checkbox">
@@ -38,11 +39,13 @@
   
   <div class="main">
     <div class="content">
-        <img :src="props.produto.imagem.produtoStore.currentProduto.poster_path" alt="Produto" class="produto"
-/>
+      
+        <!-- <img :src="(props.produto.imagem).produtoStore.currentProduto.poster_path"
+        :alt="movieStore.currentMovie.title" 
+/>   -->
       <div class="details">
-        <h1 class="titulo-produto">{{ props.produto.descricao }}</h1>
-        <p class="preco-produto">R$ {{ props.produto.preco }}</p>
+        <h1 class="titulo-produto">{{ produtoId }}</h1>
+        <p class="preco-produto">R$ TODO</p>
       </div>
       <div class="btn">
         <meu-botao class="info" @click="emit('adicionarASacola', props.produto)" style="font-size: 20px;">Adicionar a
